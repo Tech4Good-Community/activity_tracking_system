@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:department",
  "creation": "2024-02-13 12:11:10.502151",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,15 +12,17 @@
   {
    "fieldname": "department",
    "fieldtype": "Data",
-   "label": "Department"
+   "label": "Department",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 12:11:17.785501",
+ "modified": "2024-02-13 13:24:15.219489",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Department",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

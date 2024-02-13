@@ -14,11 +14,40 @@
  "label": "Activity Tracker",
  "links": [
   {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Activity Details",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Activity",
+   "link_count": 0,
+   "link_to": "Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Department",
+   "link_count": 0,
+   "link_to": "Department",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
    "description": "This is a shortcut to add the details about the funders and projects related to the funders!",
    "hidden": 0,
    "is_query_report": 0,
    "label": "Funder and Project Details",
-   "link_count": 4,
+   "link_count": 5,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -66,34 +95,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Activity Details",
-   "link_count": 2,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Activity",
+   "label": "Funds Allocation",
    "link_count": 0,
-   "link_to": "Activity",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Department",
-   "link_count": 0,
-   "link_to": "Department",
+   "link_to": "Funds Allocation",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2024-02-13 12:05:41.435297",
+ "modified": "2024-02-13 13:52:19.605743",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity Tracker",

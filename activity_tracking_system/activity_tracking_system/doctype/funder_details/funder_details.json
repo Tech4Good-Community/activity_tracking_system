@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-02-13 11:22:01.419371",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,7 +12,7 @@
   "funder_status",
   "funder_email",
   "column_break_qssb",
-  "funder_id",
+  "naming_series",
   "government_id",
   "aadhar_card_number",
   "pan_card_number",
@@ -45,11 +46,6 @@
   {
    "fieldname": "column_break_qssb",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "funder_id",
-   "fieldtype": "Data",
-   "label": "Funder ID"
   },
   {
    "fieldname": "government_id",
@@ -119,14 +115,27 @@
    "fieldname": "poc_designation",
    "fieldtype": "Data",
    "label": "Poc designation"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Funder ID",
+   "options": "FUND - ",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-02-13 11:42:32.988971",
+ "links": [
+  {
+   "link_doctype": "Project",
+   "link_fieldname": "funder"
+  }
+ ],
+ "modified": "2024-02-13 13:19:17.315954",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funder Details",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

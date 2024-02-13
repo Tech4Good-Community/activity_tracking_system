@@ -1,10 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-02-13 12:24:12.427709",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "project_code",
   "funder",
   "project_name",
   "state",
@@ -12,10 +14,10 @@
   "activity",
   "column_break_qvuk",
   "type_of_activity",
-  "project_code",
   "activity_to_be_completed_in_which_month",
   "activity_process_initiating_date",
   "activity_completion_date",
+  "naming_series",
   "section_break_csyg",
   "requirements",
   "assigned_to_which_department_for_support",
@@ -143,14 +145,21 @@
    "fieldtype": "Select",
    "label": "Activity Approval Status",
    "options": "Yes\nNo\nRework"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Activity Code",
+   "options": "ACT - "
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 12:32:02.485563",
+ "modified": "2024-02-13 13:23:28.635517",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

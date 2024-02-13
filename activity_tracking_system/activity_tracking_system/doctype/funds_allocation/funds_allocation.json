@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-13 13:25:42.228391",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "funder_and_project_details_section",
+  "funder",
+  "project_code",
+  "project_name",
+  "project_start_date",
+  "project_end_date",
+  "column_break_ocuy",
+  "date_of_planning",
+  "funds_for_the_project",
+  "naming_series",
+  "section_break_ljhn",
+  "salary_funds_allocated",
+  "salary_percentage_of_allocation",
+  "travel__funds_allocated",
+  "travel_percentage_of_allocation",
+  "activity_funds_allocated",
+  "activity__percentage_of_allocation",
+  "consultant_funds_allocated",
+  "consultant_percentage_of_allocation",
+  "column_break_lywl",
+  "equipment_funds_allocated",
+  "equipment_percentage_of_allocation",
+  "research_funds_allocated",
+  "research_percentage_of_allocation",
+  "indirect_funds_allocated",
+  "indirect_percentage_of_allocation",
+  "grand_total",
+  "status_finalised"
+ ],
+ "fields": [
+  {
+   "fieldname": "funder",
+   "fieldtype": "Link",
+   "label": "Funder",
+   "options": "Funder Details"
+  },
+  {
+   "fetch_from": "project_code.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "project_start_date",
+   "fieldtype": "Date",
+   "label": "Project start date"
+  },
+  {
+   "fieldname": "project_end_date",
+   "fieldtype": "Date",
+   "label": "Project end date"
+  },
+  {
+   "fieldname": "column_break_ocuy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_planning",
+   "fieldtype": "Date",
+   "label": "Date of Planning"
+  },
+  {
+   "fieldname": "funds_for_the_project",
+   "fieldtype": "Currency",
+   "label": "Funds for the project"
+  },
+  {
+   "fieldname": "section_break_ljhn",
+   "fieldtype": "Section Break",
+   "label": "Utilisation Category"
+  },
+  {
+   "fieldname": "salary_funds_allocated",
+   "fieldtype": "Currency",
+   "label": "Salary (Funds Allocated)"
+  },
+  {
+   "fieldname": "salary_percentage_of_allocation",
+   "fieldtype": "Percent",
+   "label": "Salary (Percentage of allocation)"
+  },
+  {
+   "fieldname": "travel__funds_allocated",
+   "fieldtype": "Currency",
+   "label": "Travel  (Funds Allocated)"
+  },
+  {
+   "fieldname": "travel_percentage_of_allocation",
+   "fieldtype": "Percent",
+   "label": "Travel (Percentage of allocation)"
+  },
+  {
+   "fieldname": "column_break_lywl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "activity_funds_allocated",
+   "fieldtype": "Currency",
+   "label": "Activity (Funds Allocated)"
+  },
+  {
+   "fieldname": "activity__percentage_of_allocation",
+   "fieldtype": "Percent",
+   "label": "Activity (Percentage of allocation)"
+  },
+  {
+   "fieldname": "consultant_funds_allocated",
+   "fieldtype": "Currency",
+   "label": "Consultant (Funds Allocated)"
+  },
+  {
+   "fieldname": "consultant_percentage_of_allocation",
+   "fieldtype": "Percent",
+   "label": "Consultant (Percentage of allocation)"
+  },
+  {
+   "fieldname": "funder_and_project_details_section",
+   "fieldtype": "Section Break",
+   "label": "Funder and Project Details"
+  },
+  {
+   "fieldname": "equipment_funds_allocated",
+   "fieldtype": "Currency",
+   "label": "Equipment (Funds Allocated)"
+  },
+  {
+   "fieldname": "equipment_percentage_of_allocation",
+   "fieldtype": "Percent",
+   "label": "Equipment (Percentage of allocation)"
+  },
+  {
+   "fieldname": "research_funds_allocated",
+   "fieldtype": "Currency",
+   "label": "Research (Funds Allocated)"
+  },
+  {
+   "fieldname": "research_percentage_of_allocation",
+   "fieldtype": "Percent",
+   "label": "Research (Percentage of allocation)"
+  },
+  {
+   "fieldname": "indirect_funds_allocated",
+   "fieldtype": "Currency",
+   "label": "Indirect (Funds Allocated)"
+  },
+  {
+   "fieldname": "indirect_percentage_of_allocation",
+   "fieldtype": "Percent",
+   "label": "Indirect (Percentage of allocation)"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Fund Allocation Code",
+   "options": "FUN-ALLOC-"
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Link",
+   "label": "Project Code",
+   "options": "Project"
+  },
+  {
+   "fieldname": "status_finalised",
+   "fieldtype": "Select",
+   "label": "Status Finalised",
+   "options": "Yes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-13 13:51:01.931418",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Funds Allocation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
