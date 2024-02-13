@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-13 11:22:01.419371",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_of_the_funder_section",
+  "funder_name",
+  "funder_type",
+  "funder_status",
+  "funder_email",
+  "column_break_qssb",
+  "funder_id",
+  "government_id",
+  "aadhar_card_number",
+  "pan_card_number",
+  "funder_phone",
+  "point_of_contact_details_section",
+  "poc_name",
+  "poc_phone",
+  "poc_email",
+  "column_break_aiof",
+  "preferred_communication_method",
+  "poc_designation"
+ ],
+ "fields": [
+  {
+   "fieldname": "funder_name",
+   "fieldtype": "Data",
+   "label": "Funder Name"
+  },
+  {
+   "fieldname": "funder_type",
+   "fieldtype": "Link",
+   "label": "Funder Type",
+   "options": "Funder Type"
+  },
+  {
+   "fieldname": "funder_status",
+   "fieldtype": "Select",
+   "label": "Funder Status",
+   "options": "Yet to fund\nfunding"
+  },
+  {
+   "fieldname": "column_break_qssb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "funder_id",
+   "fieldtype": "Data",
+   "label": "Funder ID"
+  },
+  {
+   "fieldname": "government_id",
+   "fieldtype": "Select",
+   "label": "Government ID",
+   "options": "\nPAN Card\nAadhar Card"
+  },
+  {
+   "depends_on": "eval: doc.government_id == \"Aadhar Card\"",
+   "fieldname": "aadhar_card_number",
+   "fieldtype": "Data",
+   "label": "Aadhar card number"
+  },
+  {
+   "fieldname": "pan_card_number",
+   "fieldtype": "Data",
+   "label": "PAN Card Number"
+  },
+  {
+   "fieldname": "details_of_the_funder_section",
+   "fieldtype": "Section Break",
+   "label": "Details of the Funder"
+  },
+  {
+   "fieldname": "funder_email",
+   "fieldtype": "Data",
+   "label": "Funder Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "funder_phone",
+   "fieldtype": "Phone",
+   "label": "Funder Phone"
+  },
+  {
+   "fieldname": "point_of_contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Point of Contact Details"
+  },
+  {
+   "fieldname": "poc_name",
+   "fieldtype": "Data",
+   "label": "POC Name"
+  },
+  {
+   "fieldname": "poc_phone",
+   "fieldtype": "Phone",
+   "label": "Poc Phone"
+  },
+  {
+   "fieldname": "poc_email",
+   "fieldtype": "Data",
+   "label": "Poc Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_aiof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_communication_method",
+   "fieldtype": "Select",
+   "label": "Preferred Communication Method",
+   "options": "Email\nPhone"
+  },
+  {
+   "fieldname": "poc_designation",
+   "fieldtype": "Data",
+   "label": "Poc designation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-13 11:42:32.988971",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Funder Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
