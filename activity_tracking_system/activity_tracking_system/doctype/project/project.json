@@ -84,7 +84,7 @@
    "link_fieldname": "project_code"
   }
  ],
- "modified": "2024-02-13 13:49:57.886581",
+ "modified": "2024-02-13 18:04:53.369057",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Project",
@@ -102,6 +102,16 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "role": "City Manager"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "role": "State Manager"
   }
  ],
  "sort_field": "modified",

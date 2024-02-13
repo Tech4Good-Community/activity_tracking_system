@@ -131,7 +131,7 @@
    "link_fieldname": "funder"
   }
  ],
- "modified": "2024-02-13 13:19:17.315954",
+ "modified": "2024-02-13 18:07:16.170654",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funder Details",
@@ -149,6 +149,16 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "role": "City Manager"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "role": "State Manager"
   }
  ],
  "sort_field": "modified",

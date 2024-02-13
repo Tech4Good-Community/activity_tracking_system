@@ -19,7 +19,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 16:42:29.306227",
+ "modified": "2024-02-13 18:02:57.353507",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "State",
@@ -37,6 +37,26 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "State Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "read": 1,
+   "role": "City Manager",
+   "share": 1
   }
  ],
  "sort_field": "modified",
