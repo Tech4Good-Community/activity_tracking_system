@@ -1,21 +1,22 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-02-13 12:03:10.208259",
+ "creation": "2024-02-13 12:11:10.502151",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_qalp"
+  "department"
  ],
  "fields": [
   {
-   "fieldname": "section_break_qalp",
-   "fieldtype": "Section Break"
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 12:03:10.208259",
+ "modified": "2024-02-13 12:11:17.785501",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Department",

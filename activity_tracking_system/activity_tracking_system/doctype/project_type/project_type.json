@@ -1,24 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-02-13 12:03:42.609310",
+ "autoname": "field:project_type",
+ "creation": "2024-02-13 12:09:49.858924",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_i7mq"
+  "project_type"
  ],
  "fields": [
   {
-   "fieldname": "section_break_i7mq",
-   "fieldtype": "Section Break"
+   "fieldname": "project_type",
+   "fieldtype": "Data",
+   "label": "Project Type",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 12:03:42.609310",
+ "modified": "2024-02-13 12:10:39.929515",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Project Type",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
