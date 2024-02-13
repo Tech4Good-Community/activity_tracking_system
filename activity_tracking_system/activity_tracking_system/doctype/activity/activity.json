@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-13 12:24:12.427709",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "funder",
+  "project_name",
+  "state",
+  "city",
+  "activity",
+  "column_break_qvuk",
+  "type_of_activity",
+  "project_code",
+  "activity_to_be_completed_in_which_month",
+  "activity_process_initiating_date",
+  "activity_completion_date",
+  "section_break_csyg",
+  "requirements",
+  "assigned_to_which_department_for_support",
+  "budget_requested_for_the_tenure",
+  "budget_approved_for_utilisation_in_the_tenure",
+  "actual_amount_utilised",
+  "column_break_okvm",
+  "has_payment_been_processed_for_the_activity",
+  "status_of_the_activity",
+  "comments",
+  "activity_approval_status"
+ ],
+ "fields": [
+  {
+   "fetch_from": "project_code.funder",
+   "fieldname": "funder",
+   "fieldtype": "Link",
+   "label": "Funder",
+   "options": "Funder Details"
+  },
+  {
+   "fetch_from": "project_code.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "label": "Activity"
+  },
+  {
+   "fieldname": "column_break_qvuk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_activity",
+   "fieldtype": "Select",
+   "label": "Type of Activity"
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Link",
+   "label": "Project Code",
+   "options": "Project"
+  },
+  {
+   "fieldname": "activity_to_be_completed_in_which_month",
+   "fieldtype": "Date",
+   "label": "Activity To Be Completed In Which Month"
+  },
+  {
+   "fieldname": "activity_process_initiating_date",
+   "fieldtype": "Date",
+   "label": "Activity Process Initiating Date"
+  },
+  {
+   "fieldname": "activity_completion_date",
+   "fieldtype": "Date",
+   "label": "Activity Completion Date"
+  },
+  {
+   "fieldname": "section_break_csyg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Small Text",
+   "label": "Requirements"
+  },
+  {
+   "fieldname": "assigned_to_which_department_for_support",
+   "fieldtype": "Link",
+   "label": "Assigned To Which Department For Support",
+   "options": "Department"
+  },
+  {
+   "fieldname": "budget_requested_for_the_tenure",
+   "fieldtype": "Currency",
+   "label": "Budget Requested For The Tenure"
+  },
+  {
+   "fieldname": "budget_approved_for_utilisation_in_the_tenure",
+   "fieldtype": "Currency",
+   "label": "Budget Approved For Utilisation In The Tenure"
+  },
+  {
+   "fieldname": "actual_amount_utilised",
+   "fieldtype": "Currency",
+   "label": "Actual Amount Utilised"
+  },
+  {
+   "fieldname": "column_break_okvm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "has_payment_been_processed_for_the_activity",
+   "fieldtype": "Select",
+   "label": "Has Payment Been Processed For The Activity",
+   "options": "\nYes\nNo\nNot Applicable"
+  },
+  {
+   "fieldname": "status_of_the_activity",
+   "fieldtype": "Select",
+   "label": "Status Of The Activity",
+   "options": "\nNot Initiated\nUnder Process\nActivity Completed But Payment Not Required\nActivity Completed But Payment Not Processed\nPayment Processed\nOver Due\nNot Applicable"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "activity_approval_status",
+   "fieldtype": "Select",
+   "label": "Activity Approval Status",
+   "options": "Yes\nNo\nRework"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-13 12:32:02.485563",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
