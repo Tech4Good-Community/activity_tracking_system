@@ -103,7 +103,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-02-13 13:52:19.605743",
+ "modified": "2024-02-13 16:54:47.576449",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity Tracker",
@@ -112,7 +112,14 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "City Manager"
+  },
+  {
+   "role": "State Manager"
+  }
+ ],
  "sequence_id": 28.0,
  "shortcuts": [],
  "title": "Activity Tracker"

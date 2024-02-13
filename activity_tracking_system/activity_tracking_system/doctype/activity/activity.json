@@ -46,13 +46,15 @@
   },
   {
    "fieldname": "state",
-   "fieldtype": "Data",
-   "label": "State"
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
   },
   {
    "fieldname": "city",
-   "fieldtype": "Data",
-   "label": "City"
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "City"
   },
   {
    "fieldname": "activity",
@@ -155,7 +157,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 13:23:28.635517",
+ "modified": "2024-02-13 16:50:27.050427",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
