@@ -33,7 +33,8 @@
   "indirect_funds_allocated",
   "indirect_percentage_of_allocation",
   "grand_total",
-  "status_finalised"
+  "status_finalised",
+  "amended_from"
  ],
  "fields": [
   {
@@ -70,7 +71,8 @@
   {
    "fieldname": "funds_for_the_project",
    "fieldtype": "Currency",
-   "label": "Funds for the project"
+   "label": "Funds for the project",
+   "options": "INR"
   },
   {
    "fieldname": "section_break_ljhn",
@@ -178,11 +180,22 @@
    "fieldtype": "Select",
    "label": "Status Finalised",
    "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Funds Allocation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-02-13 13:51:01.931418",
+ "modified": "2024-02-14 15:33:14.269597",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funds Allocation",
@@ -204,5 +217,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
 }
