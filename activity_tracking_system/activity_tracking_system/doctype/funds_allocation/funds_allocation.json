@@ -17,23 +17,33 @@
   "funds_for_the_project",
   "naming_series",
   "section_break_ljhn",
+  "salary_funds_column",
   "salary_funds_allocated",
   "salary_percentage_of_allocation",
+  "column_break_lywl",
   "travel__funds_allocated",
   "travel_percentage_of_allocation",
+  "activity_funds_column",
   "activity_funds_allocated",
   "activity__percentage_of_allocation",
+  "consultant_funds_section",
+  "consultant_funds_column",
   "consultant_funds_allocated",
   "consultant_percentage_of_allocation",
-  "column_break_lywl",
+  "column_break_foli",
   "equipment_funds_allocated",
   "equipment_percentage_of_allocation",
+  "research_funds_column",
   "research_funds_allocated",
   "research_percentage_of_allocation",
+  "indirect_funds_section",
   "indirect_funds_allocated",
+  "column_break_xfps",
   "indirect_percentage_of_allocation",
+  "grand_total_section",
   "grand_total",
   "status_finalised",
+  "column_break_hecg",
   "amended_from"
  ],
  "fields": [
@@ -76,8 +86,7 @@
   },
   {
    "fieldname": "section_break_ljhn",
-   "fieldtype": "Section Break",
-   "label": "Utilisation Category"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "salary_funds_allocated",
@@ -101,7 +110,8 @@
   },
   {
    "fieldname": "column_break_lywl",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Travel Funds"
   },
   {
    "fieldname": "activity_funds_allocated",
@@ -190,12 +200,59 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "consultant_funds_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_foli",
+   "fieldtype": "Column Break",
+   "label": "Equipment Funds"
+  },
+  {
+   "fieldname": "indirect_funds_section",
+   "fieldtype": "Section Break",
+   "label": "Indirect Funds"
+  },
+  {
+   "fieldname": "column_break_xfps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total_section",
+   "fieldtype": "Section Break",
+   "label": "Grand Total & Status"
+  },
+  {
+   "fieldname": "column_break_hecg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_funds_column",
+   "fieldtype": "Column Break",
+   "label": "Salary Funds"
+  },
+  {
+   "fieldname": "activity_funds_column",
+   "fieldtype": "Column Break",
+   "label": "Activity Funds"
+  },
+  {
+   "fieldname": "consultant_funds_column",
+   "fieldtype": "Column Break",
+   "label": "Consultant Funds"
+  },
+  {
+   "fieldname": "research_funds_column",
+   "fieldtype": "Column Break",
+   "label": "Research Funds"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-14 15:33:14.269597",
+ "modified": "2024-02-14 17:31:59.770525",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funds Allocation",
