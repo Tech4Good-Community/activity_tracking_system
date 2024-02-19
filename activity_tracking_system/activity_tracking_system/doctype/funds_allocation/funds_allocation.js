@@ -8,23 +8,26 @@
 // });
 
 frappe.ui.form.on('Funds Allocation', {
-    onload: function(frm) {
-        // Your onload code here
-    },
-    refresh: function(frm) {
-        if (frm.doc.__islocal) {
-            frm.remove_custom_button('Request Edit');
-        } else {
-            // Check if the user has permission to view the button
-            if (frappe.user.has_role('Human Resource Director')) {
-                frm.add_custom_button(__('Request Edit'), function() {
-                    // Custom button action
-                    // For example, show an alert
-                    frappe.msgprint('Custom button clicked!');
-                });
+    after_save: function(frm) {
+        frappe.call({
+            method: 'activity_tracking_system.activity_tracking_system.doctype.funds_allocation.funds_allocation.calculate_direct_cost',
+            args: {
+                doc: frm.doc
+            },
+            callback: function(r) {
+                if(r.message) {
+                    console.log(r.message[0])
+                }
             }
-        }
+        })
+
+
+
+
+
+
     }
+    
 });
 
 
