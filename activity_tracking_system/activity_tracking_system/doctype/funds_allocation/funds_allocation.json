@@ -7,12 +7,13 @@
  "engine": "InnoDB",
  "field_order": [
   "funder_and_project_details_section",
-  "funder",
   "project_code",
   "project_name",
+  "funder",
+  "funder_name",
+  "column_break_ocuy",
   "project_start_date",
   "project_end_date",
-  "column_break_ocuy",
   "date_of_planning",
   "funds_for_the_project",
   "naming_series",
@@ -48,9 +49,10 @@
  ],
  "fields": [
   {
+   "fetch_from": "project_code.funder",
    "fieldname": "funder",
    "fieldtype": "Link",
-   "label": "Funder",
+   "label": "Funder ID",
    "options": "Funder Details"
   },
   {
@@ -96,7 +98,8 @@
   {
    "fieldname": "salary_percentage_of_allocation",
    "fieldtype": "Percent",
-   "label": "Salary (Percentage of allocation)"
+   "label": "Salary (Percentage of allocation)",
+   "read_only": 1
   },
   {
    "fieldname": "travel__funds_allocated",
@@ -106,7 +109,8 @@
   {
    "fieldname": "travel_percentage_of_allocation",
    "fieldtype": "Percent",
-   "label": "Travel (Percentage of allocation)"
+   "label": "Travel (Percentage of allocation)",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_lywl",
@@ -121,7 +125,8 @@
   {
    "fieldname": "activity__percentage_of_allocation",
    "fieldtype": "Percent",
-   "label": "Activity (Percentage of allocation)"
+   "label": "Activity (Percentage of allocation)",
+   "read_only": 1
   },
   {
    "fieldname": "consultant_funds_allocated",
@@ -131,7 +136,8 @@
   {
    "fieldname": "consultant_percentage_of_allocation",
    "fieldtype": "Percent",
-   "label": "Consultant (Percentage of allocation)"
+   "label": "Consultant (Percentage of allocation)",
+   "read_only": 1
   },
   {
    "fieldname": "funder_and_project_details_section",
@@ -146,7 +152,8 @@
   {
    "fieldname": "equipment_percentage_of_allocation",
    "fieldtype": "Percent",
-   "label": "Equipment (Percentage of allocation)"
+   "label": "Equipment (Percentage of allocation)",
+   "read_only": 1
   },
   {
    "fieldname": "research_funds_allocated",
@@ -156,7 +163,8 @@
   {
    "fieldname": "research_percentage_of_allocation",
    "fieldtype": "Percent",
-   "label": "Research (Percentage of allocation)"
+   "label": "Research (Percentage of allocation)",
+   "read_only": 1
   },
   {
    "fieldname": "indirect_funds_allocated",
@@ -166,12 +174,14 @@
   {
    "fieldname": "indirect_percentage_of_allocation",
    "fieldtype": "Percent",
-   "label": "Indirect (Percentage of allocation)"
+   "label": "Indirect (Percentage of allocation)",
+   "read_only": 1
   },
   {
    "fieldname": "grand_total",
    "fieldtype": "Currency",
-   "label": "Grand Total"
+   "label": "Grand Total",
+   "read_only": 1
   },
   {
    "fieldname": "naming_series",
@@ -247,12 +257,18 @@
    "fieldname": "research_funds_column",
    "fieldtype": "Column Break",
    "label": "Research Funds"
+  },
+  {
+   "fetch_from": "funder.funder_name",
+   "fieldname": "funder_name",
+   "fieldtype": "Data",
+   "label": "Funder Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-14 17:31:59.770525",
+ "modified": "2024-02-20 16:15:45.052850",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funds Allocation",
