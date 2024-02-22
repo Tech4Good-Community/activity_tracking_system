@@ -36,6 +36,7 @@
    "fetch_from": "project_code.funder",
    "fieldname": "funder",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Funder",
    "options": "Funder Details"
   },
@@ -43,23 +44,27 @@
    "fetch_from": "project_code.project_name",
    "fieldname": "project_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Project Name"
   },
   {
    "fieldname": "state",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "State",
    "options": "State"
   },
   {
    "fieldname": "city",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "City",
    "options": "City"
   },
   {
    "fieldname": "activity",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Activity"
   },
   {
@@ -69,22 +74,26 @@
   {
    "fieldname": "type_of_activity",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Type of Activity"
   },
   {
    "fieldname": "project_code",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Project Code",
    "options": "Project"
   },
   {
    "fieldname": "activity_to_be_completed_in_which_month",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Activity To Be Completed In Which Month"
   },
   {
    "fieldname": "activity_process_initiating_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Activity Process Initiating Date"
   },
   {
@@ -104,22 +113,26 @@
   {
    "fieldname": "assigned_to_which_department_for_support",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Assigned To Which Department For Support",
    "options": "Department"
   },
   {
    "fieldname": "budget_requested_for_the_tenure",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Budget Requested For The Tenure"
   },
   {
    "fieldname": "budget_approved_for_utilisation_in_the_tenure",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Budget Approved For Utilisation In The Tenure"
   },
   {
    "fieldname": "actual_amount_utilised",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Actual Amount Utilised"
   },
   {
@@ -129,36 +142,41 @@
   {
    "fieldname": "has_payment_been_processed_for_the_activity",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Has Payment Been Processed For The Activity",
    "options": "\nYes\nNo\nNot Applicable"
   },
   {
    "fieldname": "status_of_the_activity",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status Of The Activity",
    "options": "\nNot Initiated\nUnder Process\nActivity Completed But Payment Not Required\nActivity Completed But Payment Not Processed\nPayment Processed\nOver Due\nNot Applicable"
   },
   {
    "fieldname": "comments",
    "fieldtype": "Small Text",
+   "in_list_view": 1,
    "label": "Comments"
   },
   {
    "fieldname": "activity_approval_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Activity Approval Status",
    "options": "Yes\nNo\nRework"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Activity Code",
    "options": "ACT - "
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 17:58:30.935117",
+ "modified": "2024-02-22 11:53:03.353085",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
