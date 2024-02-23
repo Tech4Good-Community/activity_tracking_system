@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2024-02-22 11:42:25.351154",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2024-02-22 11:45:33.446249",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "senior-management-",
+ "owner": "Administrator",
+ "page_name": "senior-management-",
+ "roles": [
+  {
+   "role": "Executive Director"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Senior Management Home"
+}

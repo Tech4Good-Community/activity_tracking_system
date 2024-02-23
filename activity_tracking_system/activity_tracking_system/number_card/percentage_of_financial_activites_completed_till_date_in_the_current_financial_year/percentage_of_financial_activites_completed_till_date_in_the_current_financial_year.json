@@ -1,0 +1,21 @@
+{
+ "creation": "2024-02-23 11:30:29.462982",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "null",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Percentage of Financial Activites completed till date in the Current Financial Year",
+ "method": "activity_tracking_system.utils.get_financial_activities_completion_percentage",
+ "modified": "2024-02-23 11:30:46.358056",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Percentage of Financial Activites completed till date in the Current Financial Year",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Custom"
+}

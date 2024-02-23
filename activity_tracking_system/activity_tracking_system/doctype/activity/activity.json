@@ -75,7 +75,8 @@
    "fieldname": "type_of_activity",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Type of Activity"
+   "label": "Type of Activity",
+   "options": "Financial Activity\nNon-financial Activity"
   },
   {
    "fieldname": "project_code",
@@ -176,7 +177,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-22 11:53:03.353085",
+ "modified": "2024-02-22 16:15:37.075800",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",

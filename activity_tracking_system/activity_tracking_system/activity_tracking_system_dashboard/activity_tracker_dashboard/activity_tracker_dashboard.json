@@ -1,0 +1,39 @@
+{
+ "cards": [
+  {
+   "card": "Current Month Activities"
+  },
+  {
+   "card": "Number of Non-financial Activities for Current Month"
+  },
+  {
+   "card": "Number of Financial Activities for the Current Month"
+  },
+  {
+   "card": "NUMBER OF FINANCIAL ACTIVITIES DUE (PAYMENT NOT PROCESSED) FOR THE CURRENT MONTH"
+  },
+  {
+   "card": "Percentage of Financial Activites completed till date in the Current Financial Year"
+  },
+  {
+   "card": "Percentage of Non Financial Activities completed till date in the Current Financial year"
+  }
+ ],
+ "charts": [
+  {
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-02-22 14:41:26.891888",
+ "dashboard_name": "Activity Tracker Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-02-23 12:46:26.480800",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Activity Tracker Dashboard",
+ "owner": "Administrator"
+}
