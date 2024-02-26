@@ -29,6 +29,18 @@
   },
   {
    "card": "Number Of Financial Activities Completed (Payment Processed) On Time In The Current Month"
+  },
+  {
+   "card": "Percentage Of Financial Activities Completed (Payment Processed) On Time In The Current Month"
+  },
+  {
+   "card": "Actual Budget Allocated For The Current Month"
+  },
+  {
+   "card": "Actual Budget Utilized For The Current Month"
+  },
+  {
+   "card": "Percentage Of Budget Utilized"
   }
  ],
  "charts": [
@@ -43,7 +55,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-02-26 14:29:30.417678",
+ "modified": "2024-02-26 16:27:58.395621",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity Tracker Dashboard",

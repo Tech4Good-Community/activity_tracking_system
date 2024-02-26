@@ -157,3 +157,77 @@ def get_num_of_financial_activities_payment_processed():
                                                                     
                                                                       })
     return completed_activities_count
+
+@frappe.whitelist()
+def get_percentage_of_financial_activities_payment_processed():
+    first_day_of_month, last_day_of_month = get_current_month()
+    
+    completed_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
+                                                                      "activity_completion_date": (">=", first_day_of_month),
+                                                                      "activity_completion_date": ("<", last_day_of_month),
+                                                                      "activity_to_be_completed_in_which_month": (">=", first_day_of_month),
+                                                                      "activity_to_be_completed_in_which_month": ("<", last_day_of_month)
+                                                                     })
+    payment_processed_activities = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
+                                                                       "activity_completion_date": (">=", first_day_of_month),
+                                                                       "activity_completion_date": ("<", last_day_of_month),
+                                                                       "activity_to_be_completed_in_which_month": (">=", first_day_of_month),
+                                                                       "activity_to_be_completed_in_which_month": ("<", last_day_of_month),
+                                                                       "status_of_the_activity":"Payment Processed"
+                                                                      })
+    if completed_activities_count > 0:
+        percentage_of_financial_activities_processed_payment = round(((payment_processed_activities / completed_activities_count) * 100), 2)
+    else:
+        percentage_of_financial_activities_processed_payment = 0
+
+    return percentage_of_financial_activities_processed_payment
+
+
+@frappe.whitelist()
+def get_budget_utilized_sum():
+    first_day_of_month, last_day_of_month = get_current_month()
+
+
+    # Query budget utilization records within the given time frame
+    budget_utilization_records = frappe.get_all("Activity",
+                                                filters={"type_of_activity": "Financial Activity",
+                                                                      "activity_completion_date": (">=", first_day_of_month),
+                                                                      "activity_completion_date": ("<", last_day_of_month)},
+                                                fields=["sum(budget_approved_for_utilisation_in_the_tenure) as actual_budget_utilised_for_the_current_month"])
+
+    # Extract the sum of budget utilized from the query result
+    total_utilized_sum = budget_utilization_records[0].actual_budget_utilised_for_the_current_month if budget_utilization_records else 0
+
+    return total_utilized_sum
+
+@frappe.whitelist()
+def get_budget_allocated_sum():
+    first_day_of_month, last_day_of_month = get_current_month()
+    
+    budget_allocated_records = frappe.get_all("Activity",
+                                              filters={"type_of_activity": "Financial Activity",
+                                                       "activity_completion_date": (">=", first_day_of_month),
+                                                       "activity_completion_date": ("<", last_day_of_month)},
+                                              fields=["sum(actual_amount_utilised) as actual_budget_allocated_for_the_current_month"])
+    
+    total_allocated_sum = budget_allocated_records[0].actual_budget_allocated_for_the_current_month if budget_allocated_records else 0
+    
+    return total_allocated_sum
+
+@frappe.whitelist()
+def get_percentage_of_budget_utilised():
+    total_utilized_sum = get_budget_utilized_sum()
+    total_allocated_sum = get_budget_allocated_sum()
+    
+    if total_allocated_sum != 0:  # Avoid division by zero
+        percentage_of_budget_utilised = round(((total_utilized_sum / total_allocated_sum) * 100), 2)
+    else:
+        percentage_of_budget_utilised = 0
+    
+    return percentage_of_budget_utilised
+
+
+
+  
+
+                                                                    
