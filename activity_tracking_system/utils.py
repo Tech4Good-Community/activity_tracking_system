@@ -193,7 +193,7 @@ def get_budget_utilized_sum():
                                                 filters={"type_of_activity": "Financial Activity",
                                                                       "activity_completion_date": (">=", first_day_of_month),
                                                                       "activity_completion_date": ("<", last_day_of_month)},
-                                                fields=["sum(budget_approved_for_utilisation_in_the_tenure) as actual_budget_utilised_for_the_current_month"])
+                                                fields=["sum(actual_amount_utilised) as actual_budget_utilised_for_the_current_month"])
 
     # Extract the sum of budget utilized from the query result
     total_utilized_sum = budget_utilization_records[0].actual_budget_utilised_for_the_current_month if budget_utilization_records else 0
@@ -208,7 +208,7 @@ def get_budget_allocated_sum():
                                               filters={"type_of_activity": "Financial Activity",
                                                        "activity_completion_date": (">=", first_day_of_month),
                                                        "activity_completion_date": ("<", last_day_of_month)},
-                                              fields=["sum(actual_amount_utilised) as actual_budget_allocated_for_the_current_month"])
+                                              fields=["sum(budget_approved_for_utilisation_in_the_tenure) as actual_budget_allocated_for_the_current_month"])
     
     total_allocated_sum = budget_allocated_records[0].actual_budget_allocated_for_the_current_month if budget_allocated_records else 0
     
