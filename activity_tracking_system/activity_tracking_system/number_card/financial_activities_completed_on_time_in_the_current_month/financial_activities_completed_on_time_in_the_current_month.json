@@ -1,0 +1,21 @@
+{
+ "creation": "2024-02-23 16:09:24.428586",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "null",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Financial Activities Completed on time in the Current month",
+ "method": "activity_tracking_system.utils.get_financial_activities_completed_on_time",
+ "modified": "2024-02-23 16:09:33.274231",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Financial Activities Completed on time in the Current month",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Custom"
+}

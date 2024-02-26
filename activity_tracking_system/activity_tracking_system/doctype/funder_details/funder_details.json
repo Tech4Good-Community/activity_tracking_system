@@ -120,8 +120,7 @@
    "fieldname": "naming_series",
    "fieldtype": "Data",
    "label": "Funder ID",
-   "options": "FUND - ",
-   "unique": 1
+   "options": "FUND - "
   }
  ],
  "index_web_pages_for_search": 1,
@@ -131,7 +130,7 @@
    "link_fieldname": "funder"
   }
  ],
- "modified": "2024-02-13 18:07:16.170654",
+ "modified": "2024-02-23 15:49:36.686855",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funder Details",
