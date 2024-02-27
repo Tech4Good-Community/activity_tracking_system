@@ -76,15 +76,15 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "Activity",
+   "link_doctype": "Funds Allocation",
    "link_fieldname": "project_code"
   },
   {
-   "link_doctype": "Funds Allocation",
+   "link_doctype": "Planning Sheet",
    "link_fieldname": "project_code"
   }
  ],
- "modified": "2024-02-13 18:04:53.369057",
+ "modified": "2024-02-27 11:43:30.197512",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Project",

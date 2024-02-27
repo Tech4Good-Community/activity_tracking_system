@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Planning-sheet {####}",
+ "creation": "2024-02-27 11:16:28.736301",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "planning_sheet_details_section",
+  "project_code",
+  "project_name",
+  "funder_code",
+  "funder_name",
+  "city",
+  "column_break_yodm",
+  "state",
+  "name_of_the_city_manager",
+  "budget_allocated_for_the_cityplace_in_the_tenure",
+  "project_start_date",
+  "project_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_the_city_manager",
+   "fieldtype": "Data",
+   "label": "Name of the City Manager "
+  },
+  {
+   "fieldname": "budget_allocated_for_the_cityplace_in_the_tenure",
+   "fieldtype": "Currency",
+   "label": "Budget allocated for the city/place in the tenure"
+  },
+  {
+   "fetch_from": "project_code.start_date",
+   "fieldname": "project_start_date",
+   "fieldtype": "Date",
+   "label": "Project start date"
+  },
+  {
+   "fetch_from": "project_code.end_date",
+   "fieldname": "project_end_date",
+   "fieldtype": "Date",
+   "label": "Project End date"
+  },
+  {
+   "fieldname": "planning_sheet_details_section",
+   "fieldtype": "Section Break",
+   "label": "Planning Sheet Details"
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Link",
+   "label": "Project Code",
+   "options": "Project"
+  },
+  {
+   "fetch_from": "project_code.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fetch_from": "project_code.funder",
+   "fieldname": "funder_code",
+   "fieldtype": "Link",
+   "label": "Funder Code",
+   "options": "Funder Details"
+  },
+  {
+   "fetch_from": "funder_code.funder_name",
+   "fieldname": "funder_name",
+   "fieldtype": "Data",
+   "label": "Funder Name"
+  },
+  {
+   "fieldname": "column_break_yodm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "city.state",
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "City"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Activity",
+   "link_fieldname": "project_code"
+  }
+ ],
+ "modified": "2024-02-27 11:59:27.207202",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Planning Sheet",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "City Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "State Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

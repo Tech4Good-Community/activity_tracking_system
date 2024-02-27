@@ -7,13 +7,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "planning_sheet",
   "project_code",
   "funder",
   "project_name",
   "state",
   "city",
-  "activity",
   "column_break_qvuk",
+  "activity",
   "type_of_activity",
   "activity_to_be_completed_in_which_month",
   "activity_process_initiating_date",
@@ -48,6 +49,7 @@
    "label": "Project Name"
   },
   {
+   "fetch_from": "planning_sheet.state",
    "fieldname": "state",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -55,6 +57,7 @@
    "options": "State"
   },
   {
+   "fetch_from": "planning_sheet.city",
    "fieldname": "city",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -79,6 +82,7 @@
    "options": "Financial Activity\nNon-financial Activity"
   },
   {
+   "fetch_from": "planning_sheet.project_code",
    "fieldname": "project_code",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -173,11 +177,17 @@
    "in_list_view": 1,
    "label": "Activity Code",
    "options": "ACT - "
+  },
+  {
+   "fieldname": "planning_sheet",
+   "fieldtype": "Link",
+   "label": "Planning Sheet",
+   "options": "Planning Sheet"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-22 16:15:37.075800",
+ "modified": "2024-02-27 11:58:16.534576",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
