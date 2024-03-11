@@ -96,7 +96,6 @@ def get_non_financial_activities_completion_percentage():
     total_non_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": (">=", start_date),
                                                                        "activity_process_initiating_date": ("<=", end_date),
                                                                        "type_of_activity": "Non-financial Activity"})
-    print(total_non_financial_activities)
 
     completed_non_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": (">=", start_date),
                                                                            "activity_process_initiating_date": ("<=", end_date),
