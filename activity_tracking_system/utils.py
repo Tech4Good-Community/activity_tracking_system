@@ -35,26 +35,38 @@ def get_current_month():
 @frappe.whitelist()
 def get_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
-    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month)})
+    
+    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": 
+                                                             ["between", [first_day_of_month, last_day_of_month]]})
+    
+    activities = frappe.get_all("Activity", filters={"activity_to_be_completed_in_which_month": 
+                                                      ["between", [first_day_of_month, last_day_of_month]]})
+    
     return activities_count
+
 
 @frappe.whitelist()
 def get_non_financial_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
-    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month), "type_of_activity": "Non-financial Activity"})
+    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": 
+                                                             ["between", [first_day_of_month, last_day_of_month]], "type_of_activity": "Non-financial Activity"})
+    activities = frappe.get_all("Activity", filters={"activity_to_be_completed_in_which_month": 
+                                                             ["between", [first_day_of_month, last_day_of_month]], "type_of_activity": "Non-financial Activity"})
     return activities_count
 
 @frappe.whitelist()
 def get_financial_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
-    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month), "type_of_activity": "Financial Activity"})
+    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": 
+                                                             ["between", [first_day_of_month, last_day_of_month]], "type_of_activity": "Financial Activity"})
    
     return activities_count
 
 @frappe.whitelist()
 def get_payment_not_processed_financial_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
-    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month), "type_of_activity": "Financial Activity", "status_of_the_activity":"Activity Completed But Payment Not Processed"}) 
+    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": 
+                                                             ["between", [first_day_of_month, last_day_of_month]], "type_of_activity": "Financial Activity", "status_of_the_activity":"Activity Completed But Payment Not Processed"}) 
     return activities_count
 
 @frappe.whitelist()
@@ -64,12 +76,10 @@ def get_financial_activities_completion_percentage():
     start_date = fiscal_year[0]
     end_date = fiscal_year[1]
 
-    total_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": (">=", start_date),
-                                                                       "activity_process_initiating_date": ("<=", end_date),
+    total_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": ["between", [start_date, end_date]],
                                                                        "type_of_activity": "Financial Activity"})
 
-    completed_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": (">=", start_date),
-                                                                           "activity_process_initiating_date": ("<=", end_date),
+    completed_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": ["between", [start_date, end_date]],
                                                                            "type_of_activity": "Financial Activity",
                                                                            "status_of_the_activity": "Payment Processed"})
 
@@ -93,12 +103,10 @@ def get_non_financial_activities_completion_percentage():
     start_date = fiscal_year[0]
     end_date = fiscal_year[1]
 
-    total_non_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": (">=", start_date),
-                                                                       "activity_process_initiating_date": ("<=", end_date),
+    total_non_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": ["between", [start_date, end_date]],
                                                                        "type_of_activity": "Non-financial Activity"})
 
-    completed_non_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": (">=", start_date),
-                                                                           "activity_process_initiating_date": ("<=", end_date),
+    completed_non_financial_activities = frappe.db.count("Activity", filters={"activity_process_initiating_date": ["between", [start_date, end_date]],
                                                                            "type_of_activity": "Non-financial Activity",
                                                                            "status_of_the_activity": "Activity Completed But Payment Not Required"})
 
@@ -114,13 +122,10 @@ def get_non_financial_activities_completed_on_time_current_month_percentage():
     first_day_of_month, last_day_of_month = get_current_month()
     
     total_non_financial_activites_completed = frappe.db.count("Activity", filters = {"type_of_activity": "Non-financial Activity",
-                                                                                     "activity_completion_date": (">=", first_day_of_month),
-                                                             "activity_completion_date": ("<", last_day_of_month),
-                                                             "activity_to_be_completed_in_which_month":(">=", first_day_of_month),
-                                                             "activity_to_be_completed_in_which_month":("<=", last_day_of_month)})
+                                                                                     "activity_completion_date": ["between", [first_day_of_month, last_day_of_month]],
+                                                             "activity_to_be_completed_in_which_month":["between", [first_day_of_month, last_day_of_month]]})
     
-    total_non_financial_activities =  frappe.db.count("Activity", filters = {"activity_to_be_completed_in_which_month":(">=", first_day_of_month),
-                                                             "activity_to_be_completed_in_which_month":("<=", last_day_of_month),
+    total_non_financial_activities =  frappe.db.count("Activity", filters = {"activity_to_be_completed_in_which_month":["between", [first_day_of_month, last_day_of_month]],
                                                              "type_of_activity": "Non-financial Activity"})
     
     
@@ -137,10 +142,8 @@ def get_financial_activities_completed_on_time():
     first_day_of_month, last_day_of_month = get_current_month()
     
     activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
-                                                             "activity_completion_date": (">=", first_day_of_month),
-                                                             "activity_completion_date": ("<", last_day_of_month),
-                                                             "activity_to_be_completed_in_which_month":(">=", first_day_of_month),
-                                                             "activity_to_be_completed_in_which_month":("<=", last_day_of_month)})
+                                                             "activity_completion_date":["between", [first_day_of_month, last_day_of_month]],
+                                                             "activity_to_be_completed_in_which_month":["between", [first_day_of_month, last_day_of_month]]})
     
     return activities_count
 
@@ -149,12 +152,11 @@ def get_num_of_non_financial_activities_due():
     first_day_of_month, last_day_of_month = get_current_month()
 
     completed_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Non-financial Activity",
-                                                                      "activity_completion_date": (">=", first_day_of_month),
-                                                                      "activity_completion_date": ("<=", last_day_of_month)})
+                                                                      "activity_completion_date":["between", [first_day_of_month, last_day_of_month]],
+                                                                      })
 
     total_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Non-financial Activity",
-                                                                  "activity_to_be_completed_in_which_month": (">=", first_day_of_month),
-                                                                  "activity_to_be_completed_in_which_month": ("<=", last_day_of_month)})
+                                                                  "activity_to_be_completed_in_which_month": ["between", [first_day_of_month, last_day_of_month]]})
 
     due_activities_count = total_activities_count - completed_activities_count
     
@@ -165,10 +167,8 @@ def get_num_of_financial_activities_payment_processed():
     first_day_of_month, last_day_of_month = get_current_month()
     
     completed_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
-                                                                       "activity_completion_date": (">=", first_day_of_month),
-                                                                      "activity_completion_date": ("<=", last_day_of_month),
-                                                                       "activity_to_be_completed_in_which_month": (">=", first_day_of_month),
-                                                                    "activity_to_be_completed_in_which_month": ("<=", last_day_of_month),
+                                                                       "activity_completion_date":["between", [first_day_of_month, last_day_of_month]],
+                                                                       "activity_to_be_completed_in_which_month": ["between", [first_day_of_month, last_day_of_month]],
                                                                     "status_of_the_activity":"Payment Processed"
                                                                     
                                                                       })
@@ -179,16 +179,12 @@ def get_percentage_of_financial_activities_payment_processed():
     first_day_of_month, last_day_of_month = get_current_month()
     
     completed_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
-                                                                      "activity_completion_date": (">=", first_day_of_month),
-                                                                      "activity_completion_date": ("<=", last_day_of_month),
-                                                                      "activity_to_be_completed_in_which_month": (">=", first_day_of_month),
-                                                                      "activity_to_be_completed_in_which_month": ("<=", last_day_of_month)
+                                                                      "activity_completion_date":["between", [first_day_of_month, last_day_of_month]],
+                                                                      "activity_to_be_completed_in_which_month": ["between", [first_day_of_month, last_day_of_month]]
                                                                      })
     payment_processed_activities = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
-                                                                       "activity_completion_date": (">=", first_day_of_month),
-                                                                       "activity_completion_date": ("<", last_day_of_month),
-                                                                       "activity_to_be_completed_in_which_month": (">=", first_day_of_month),
-                                                                       "activity_to_be_completed_in_which_month": ("<=", last_day_of_month),
+                                                                       "activity_completion_date": ["between", [first_day_of_month, last_day_of_month]],
+                                                                       "activity_to_be_completed_in_which_month":["between", [first_day_of_month, last_day_of_month]],
                                                                        "status_of_the_activity":"Payment Processed"
                                                                       })
     if completed_activities_count > 0:
@@ -207,8 +203,7 @@ def get_budget_utilized_sum():
     # Query budget utilization records within the given time frame
     budget_utilization_records = frappe.get_all("Activity",
                                                 filters={"type_of_activity": "Financial Activity",
-                                                                      "activity_completion_date": (">=", first_day_of_month),
-                                                                      "activity_completion_date": ("<=", last_day_of_month)},
+                                                                      "activity_completion_date":["between", [first_day_of_month, last_day_of_month]]},
                                                 fields=["sum(actual_amount_utilised) as actual_budget_utilised_for_the_current_month"])
 
     # Extract the sum of budget utilized from the query result
@@ -222,8 +217,7 @@ def get_budget_allocated_sum():
     
     budget_allocated_records = frappe.get_all("Activity",
                                               filters={"type_of_activity": "Financial Activity",
-                                                       "activity_completion_date": (">=", first_day_of_month),
-                                                       "activity_completion_date": ("<=", last_day_of_month)},
+                                                       "activity_completion_date": ["between", [first_day_of_month, last_day_of_month]]},
                                               fields=["sum(budget_approved_for_utilisation_in_the_tenure) as actual_budget_allocated_for_the_current_month"])
     
     total_allocated_sum = budget_allocated_records[0].actual_budget_allocated_for_the_current_month if budget_allocated_records else 0

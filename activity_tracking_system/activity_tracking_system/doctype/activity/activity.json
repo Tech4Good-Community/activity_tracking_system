@@ -177,10 +177,10 @@
   },
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Activity Code",
-   "options": "ACT - "
+   "options": "ACT -"
   },
   {
    "fieldname": "planning_sheet",
@@ -206,7 +206,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-27 13:05:07.195300",
+ "modified": "2024-03-11 17:20:58.109851",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
