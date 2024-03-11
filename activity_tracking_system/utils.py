@@ -36,28 +36,25 @@ def get_current_month():
 def get_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
     activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month)})
-    print(activities_count)
     return activities_count
 
 @frappe.whitelist()
 def get_non_financial_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
     activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month), "type_of_activity": "Non-financial Activity"})
-    print(activities_count)
     return activities_count
 
 @frappe.whitelist()
 def get_financial_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
     activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month), "type_of_activity": "Financial Activity"})
-    print(activities_count)
+   
     return activities_count
 
 @frappe.whitelist()
 def get_payment_not_processed_financial_activities_current_month():
     first_day_of_month, last_day_of_month = get_current_month()
-    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month), "type_of_activity": "Financial Activity", "status_of_the_activity":"Activity Completed But Payment Not Processed"})
-    print(activities_count)
+    activities_count = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": (">=", first_day_of_month), "activity_to_be_completed_in_which_month": ("<=", last_day_of_month), "type_of_activity": "Financial Activity", "status_of_the_activity":"Activity Completed But Payment Not Processed"}) 
     return activities_count
 
 @frappe.whitelist()
