@@ -7,6 +7,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "activity_details_section",
   "planning_sheet",
   "project_code",
   "funder",
@@ -20,15 +21,17 @@
   "activity_process_initiating_date",
   "activity_completion_date",
   "naming_series",
+  "section_break_rzbw",
+  "budget_requested_for_the_tenure",
+  "has_payment_been_processed_for_the_activity",
+  "column_break_rsdf",
+  "budget_approved_for_utilisation_in_the_tenure",
+  "actual_amount_utilised",
   "section_break_csyg",
   "requirements",
   "assigned_to_which_department_for_support",
-  "budget_requested_for_the_tenure",
-  "budget_approved_for_utilisation_in_the_tenure",
-  "actual_amount_utilised",
-  "column_break_okvm",
-  "has_payment_been_processed_for_the_activity",
   "status_of_the_activity",
+  "column_break_okvm",
   "comments",
   "activity_approval_status"
  ],
@@ -108,7 +111,8 @@
   },
   {
    "fieldname": "section_break_csyg",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Activity Under Process Details"
   },
   {
    "fieldname": "requirements",
@@ -183,11 +187,26 @@
    "fieldtype": "Link",
    "label": "Planning Sheet",
    "options": "Planning Sheet"
+  },
+  {
+   "depends_on": "eval: doc.type_of_activity == \"Financial Activity\"",
+   "fieldname": "section_break_rzbw",
+   "fieldtype": "Section Break",
+   "label": "Financial Activity Details"
+  },
+  {
+   "fieldname": "column_break_rsdf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "activity_details_section",
+   "fieldtype": "Section Break",
+   "label": "Activity Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-27 11:58:16.534576",
+ "modified": "2024-02-27 13:05:07.195300",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
