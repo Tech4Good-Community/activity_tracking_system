@@ -97,7 +97,7 @@
    "link_fieldname": "project_code"
   }
  ],
- "modified": "2024-02-27 11:59:27.207202",
+ "modified": "2024-02-27 12:04:14.211319",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Planning Sheet",
@@ -137,6 +137,54 @@
    "read": 1,
    "report": 1,
    "role": "State Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Deputy Director",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Department Head",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Procurement Department Head",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Executive Director",
    "share": 1,
    "write": 1
   }

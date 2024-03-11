@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:city_name",
  "creation": "2024-02-13 16:12:50.685128",
@@ -25,7 +26,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 18:00:56.560253",
+ "modified": "2024-02-27 12:17:57.814249",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "City",
