@@ -39,9 +39,9 @@
   },
   {
    "fieldname": "funder_status",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Funder Status",
-   "options": "Yet to fund\nfunding"
+   "options": "Funder Status"
   },
   {
    "fieldname": "column_break_qssb",
@@ -93,12 +93,12 @@
   {
    "fieldname": "poc_phone",
    "fieldtype": "Phone",
-   "label": "Poc Phone"
+   "label": "POC Phone"
   },
   {
    "fieldname": "poc_email",
    "fieldtype": "Data",
-   "label": "Poc Email",
+   "label": "POC Email",
    "options": "Email"
   },
   {
@@ -114,13 +114,14 @@
   {
    "fieldname": "poc_designation",
    "fieldtype": "Data",
-   "label": "Poc designation"
+   "label": "POC Designation"
   },
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Funder ID",
-   "options": "FUND - "
+   "options": "FUND -",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -130,7 +131,7 @@
    "link_fieldname": "funder"
   }
  ],
- "modified": "2024-02-23 15:49:36.686855",
+ "modified": "2024-03-22 11:48:49.124072",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funder Details",

@@ -41,6 +41,12 @@
   },
   {
    "card": "Percentage Of Budget Utilized"
+  },
+  {
+   "card": "Number Of Non-Financial Activities Overdue From The Last Month"
+  },
+  {
+   "card": "Number Of Financial Activities Overdue From The Last Month"
   }
  ],
  "charts": [
@@ -55,7 +61,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-02-26 16:27:58.395621",
+ "modified": "2024-03-22 12:19:13.021036",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity Tracker Dashboard",

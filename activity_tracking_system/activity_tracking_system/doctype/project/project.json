@@ -6,16 +6,16 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "project_name",
   "naming_series",
+  "project_name",
+  "funder",
   "project_status",
   "priority",
   "column_break_gkgy",
   "start_date",
   "end_date",
   "project_type",
-  "department",
-  "funder"
+  "department"
  ],
  "fields": [
   {
@@ -25,14 +25,15 @@
   },
   {
    "fieldname": "project_status",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Project Status",
-   "options": "\nPlanning\nNot Started\nOngoing"
+   "options": "Project Status"
   },
   {
    "fieldname": "priority",
-   "fieldtype": "Data",
-   "label": "Priority"
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Urgent\nHigh\nMedium\nLow"
   },
   {
    "fieldname": "column_break_gkgy",
@@ -68,7 +69,7 @@
   },
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Project Code",
    "options": "PROJ-"
   }
@@ -84,7 +85,7 @@
    "link_fieldname": "project_code"
   }
  ],
- "modified": "2024-02-27 11:43:30.197512",
+ "modified": "2024-03-22 11:47:30.151815",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Project",
