@@ -94,10 +94,10 @@
  "links": [
   {
    "link_doctype": "Activity",
-   "link_fieldname": "project_code"
+   "link_fieldname": "planning_sheet"
   }
  ],
- "modified": "2024-02-27 12:04:14.211319",
+ "modified": "2024-05-28 13:59:15.642370",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Planning Sheet",
@@ -189,7 +189,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "project_name"
 }

@@ -3,6 +3,7 @@
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2024-02-13 11:22:01.419371",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -131,7 +132,7 @@
    "link_fieldname": "funder"
   }
  ],
- "modified": "2024-03-22 11:48:49.124072",
+ "modified": "2024-05-28 13:42:45.817110",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funder Details",
@@ -161,7 +162,11 @@
    "role": "State Manager"
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "funder_name",
+ "track_changes": 1,
+ "translated_doctype": 1
 }

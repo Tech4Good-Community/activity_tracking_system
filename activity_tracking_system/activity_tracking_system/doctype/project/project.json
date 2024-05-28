@@ -85,7 +85,7 @@
    "link_fieldname": "project_code"
   }
  ],
- "modified": "2024-03-22 11:47:30.151815",
+ "modified": "2024-05-28 13:43:13.825737",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Project",
@@ -115,7 +115,10 @@
    "role": "State Manager"
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "project_name",
+ "translated_doctype": 1
 }

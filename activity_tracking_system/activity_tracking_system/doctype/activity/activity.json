@@ -40,7 +40,6 @@
    "fetch_from": "project_code.funder",
    "fieldname": "funder",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Funder",
    "options": "Funder Details"
   },
@@ -48,7 +47,6 @@
    "fetch_from": "project_code.project_name",
    "fieldname": "project_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Project Name"
   },
   {
@@ -95,7 +93,6 @@
   {
    "fieldname": "activity_to_be_completed_in_which_month",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Activity To Be Completed In Which Month"
   },
   {
@@ -122,26 +119,22 @@
   {
    "fieldname": "assigned_to_which_department_for_support",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Assigned To Which Department For Support",
    "options": "Department"
   },
   {
    "fieldname": "budget_requested_for_the_tenure",
    "fieldtype": "Currency",
-   "in_list_view": 1,
    "label": "Budget Requested For The Tenure"
   },
   {
    "fieldname": "budget_approved_for_utilisation_in_the_tenure",
    "fieldtype": "Currency",
-   "in_list_view": 1,
    "label": "Budget Approved For Utilisation In The Tenure"
   },
   {
    "fieldname": "actual_amount_utilised",
    "fieldtype": "Currency",
-   "in_list_view": 1,
    "label": "Actual Amount Utilised"
   },
   {
@@ -158,33 +151,30 @@
   {
    "fieldname": "status_of_the_activity",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Status Of The Activity",
    "options": "\nNot Initiated\nUnder Process\nActivity Completed But Payment Not Required\nActivity Completed But Payment Not Processed\nPayment Processed\nOver Due\nNot Applicable"
   },
   {
    "fieldname": "comments",
    "fieldtype": "Small Text",
-   "in_list_view": 1,
    "label": "Comments"
   },
   {
    "fieldname": "activity_approval_status",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Activity Approval Status",
    "options": "Yes\nNo\nRework"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Activity Code",
    "options": "ACT -"
   },
   {
    "fieldname": "planning_sheet",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Planning Sheet",
    "options": "Planning Sheet"
   },
@@ -206,7 +196,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-11 17:20:58.109851",
+ "modified": "2024-05-28 13:56:30.964057",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
@@ -268,7 +258,9 @@
    "role": "City Manager"
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "activity"
 }

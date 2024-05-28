@@ -189,7 +189,8 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Fund Allocation Code",
-   "options": "FUN-ALLOC-"
+   "options": "FUN-ALLOC-",
+   "read_only": 1
   },
   {
    "fieldname": "project_code",
@@ -270,7 +271,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-11 14:52:03.605062",
+ "modified": "2024-05-28 13:49:14.112157",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funds Allocation",
@@ -290,9 +291,11 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "project_name",
  "track_changes": 1,
  "track_seen": 1
 }

@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"HSMVF0Lq7Q\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Activity Tracker</span>\",\"col\":12}},{\"id\":\"eSk7wOVfMq\",\"type\":\"card\",\"data\":{\"card_name\":\"Funder and Project Details\",\"col\":4}},{\"id\":\"UhoyUtJ0jW\",\"type\":\"card\",\"data\":{\"card_name\":\"Planning and Activity Details\",\"col\":4}}]",
+ "content": "[{\"id\":\"HSMVF0Lq7Q\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Activity Tracker</span>\",\"col\":12}},{\"id\":\"eSk7wOVfMq\",\"type\":\"card\",\"data\":{\"card_name\":\"Funder and Project Details\",\"col\":4}},{\"id\":\"UhoyUtJ0jW\",\"type\":\"card\",\"data\":{\"card_name\":\"Planning and Activity Details\",\"col\":4}},{\"id\":\"LULdYYsknn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Insights</b></span>\",\"col\":12}},{\"id\":\"JJSigtKt4S\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity Tracker Dashboard\",\"col\":5}}]",
  "creation": "2024-02-13 11:17:08.917065",
  "custom_blocks": [],
  "docstatus": 0,
@@ -85,6 +85,16 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Planning Sheet",
+   "link_count": 0,
+   "link_to": "Planning Sheet",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Activity",
    "link_count": 0,
    "link_to": "Activity",
@@ -101,19 +111,9 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Planning Sheet",
-   "link_count": 0,
-   "link_to": "Planning Sheet",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2024-03-04 10:38:51.486939",
+ "modified": "2024-05-28 13:45:18.395367",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity Tracker",
@@ -131,6 +131,14 @@
   }
  ],
  "sequence_id": 28.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Activity Tracker Dashboard",
+   "link_to": "Activity Tracker Dashboard",
+   "type": "Dashboard"
+  }
+ ],
  "title": "Activity Tracker"
 }
