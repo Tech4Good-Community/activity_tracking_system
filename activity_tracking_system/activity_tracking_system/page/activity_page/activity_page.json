@@ -1,0 +1,20 @@
+{
+ "content": null,
+ "creation": "2024-06-19 15:28:01.871506",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "fa fa-star",
+ "idx": 0,
+ "modified": "2024-06-19 15:37:59.493770",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "activity-page",
+ "owner": "Administrator",
+ "page_name": "activity-page",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Activity"
+}
