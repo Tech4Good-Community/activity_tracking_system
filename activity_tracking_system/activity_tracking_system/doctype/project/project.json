@@ -1,12 +1,11 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:Project - {####}",
  "creation": "2024-02-13 12:20:44.744857",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
   "project_name",
   "funder",
   "project_status",
@@ -66,12 +65,6 @@
    "fieldtype": "Link",
    "label": "Funder",
    "options": "Funder Details"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Project Code",
-   "options": "PROJ-"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -85,11 +78,11 @@
    "link_fieldname": "project_code"
   }
  ],
- "modified": "2024-05-28 13:43:13.825737",
+ "modified": "2024-06-19 11:22:36.678704",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Project",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
