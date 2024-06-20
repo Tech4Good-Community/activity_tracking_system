@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:Activity - {####}",
  "creation": "2024-02-13 12:24:12.427709",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -20,7 +20,6 @@
   "activity_to_be_completed_in_which_month",
   "activity_process_initiating_date",
   "activity_completion_date",
-  "naming_series",
   "section_break_rzbw",
   "budget_requested_for_the_tenure",
   "has_payment_been_processed_for_the_activity",
@@ -50,7 +49,6 @@
    "label": "Project Name"
   },
   {
-   "fetch_from": "planning_sheet.state",
    "fieldname": "state",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -58,7 +56,6 @@
    "options": "State"
   },
   {
-   "fetch_from": "planning_sheet.city",
    "fieldname": "city",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -166,12 +163,6 @@
    "options": "Yes\nNo\nRework"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Activity Code",
-   "options": "ACT -"
-  },
-  {
    "fieldname": "planning_sheet",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -196,11 +187,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-28 13:56:30.964057",
+ "modified": "2024-06-19 12:07:46.737851",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
