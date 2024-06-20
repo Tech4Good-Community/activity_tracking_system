@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "format:funder - {###}",
  "creation": "2024-02-13 11:22:01.419371",
  "default_view": "List",
  "doctype": "DocType",
@@ -13,7 +13,6 @@
   "funder_status",
   "funder_email",
   "column_break_qssb",
-  "naming_series",
   "government_id",
   "aadhar_card_number",
   "pan_card_number",
@@ -61,6 +60,7 @@
    "label": "Aadhar card number"
   },
   {
+   "depends_on": "eval: doc.government_id ==\"PAN Card\"",
    "fieldname": "pan_card_number",
    "fieldtype": "Data",
    "label": "PAN Card Number"
@@ -116,13 +116,6 @@
    "fieldname": "poc_designation",
    "fieldtype": "Data",
    "label": "POC Designation"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Funder ID",
-   "options": "FUND -",
-   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -132,11 +125,11 @@
    "link_fieldname": "funder"
   }
  ],
- "modified": "2024-05-28 13:42:45.817110",
+ "modified": "2024-06-19 11:21:06.055564",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funder Details",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

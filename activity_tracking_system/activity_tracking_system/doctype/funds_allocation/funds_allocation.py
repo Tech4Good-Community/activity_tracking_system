@@ -10,8 +10,6 @@ class FundsAllocation(Document):
 @frappe.whitelist()
 def calculate_direct_cost(doc, salary_funds, travel_funds, equipment_funds, research_funds, activity_funds, consultant_funds, indirect_cost):
     salary = float(salary_funds)
-    #funds_for_the_project = float(funds_for_project)
-    #print(funds_for_the_project)
     travel_funds_allocated = float(travel_funds)
     activity_funds_allocated = float(activity_funds)
     consultant_funds_allocated = float(consultant_funds)
@@ -42,6 +40,7 @@ def calculate_direct_cost(doc, salary_funds, travel_funds, equipment_funds, rese
         consultant_percentage = 0
         equipment_percentage = 0
         research_percentage = 0
+    
     data = {
         "salary_percentage" : salary_percentage,
         "travel_percentage" : travel_percentage,
