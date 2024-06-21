@@ -1,0 +1,23 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-06-21 16:37:13.785064",
+  "name": "Submit to State Manager",
+  "workflow_action_name": "Submit to State Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-06-21 16:42:16.426389",
+  "name": "Suggest Changes",
+  "workflow_action_name": "Suggest Changes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-06-21 16:49:18.973026",
+  "name": "Submit to Department Head",
+  "workflow_action_name": "Submit to Department Head"
+ }
+]

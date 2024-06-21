@@ -1,0 +1,38 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-06-21 16:35:34.711717",
+  "name": "Submit From City Manager",
+  "style": "Primary",
+  "workflow_state_name": "Submit From City Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-06-21 16:36:25.172136",
+  "name": "Approval from State Manager",
+  "style": "Warning",
+  "workflow_state_name": "Approval from State Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-06-21 16:46:36.627279",
+  "name": "Approval from Department Head",
+  "style": "Warning",
+  "workflow_state_name": "Approval from Department Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-06-21 16:52:57.248965",
+  "name": "Activity Approved",
+  "style": "Success",
+  "workflow_state_name": "Activity Approved"
+ }
+]

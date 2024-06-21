@@ -4,6 +4,26 @@ app_publisher = "Tech4Good Community"
 app_description = "This is an activity tracking system developed for PSI."
 app_email = "hello@tech4goodcommunity.com"
 app_license = "mit"
+
+
+fixtures = [
+    "State",
+    "Workflow",
+    {
+        "dt": "Workflow Action Master",
+        "filters": [
+            ["workflow_action_name", "not in", ["Reject", "Review", "Approve"]]
+        ]
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [
+            ["workflow_state_name", "not in", ["Rejected", "Approved", "Pending"]]
+        ]
+    }
+]
+
+
 # required_apps = []
 
 # Includes in <head>
