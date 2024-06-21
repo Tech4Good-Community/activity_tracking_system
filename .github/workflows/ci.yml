@@ -70,6 +70,9 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+            
+      - name: Update package lists
+      - run: sudo apt-get update
 
       - name: Install MariaDB Client
         run: sudo apt-get install mariadb-client-10.6
