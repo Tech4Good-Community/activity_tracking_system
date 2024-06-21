@@ -18,5 +18,16 @@ frappe.ui.form.on('Activity', {
                 }
             });
         });
+    },
+    state(frm){
+        frm.set_query("city", (doc) => {
+            return {
+                filters : {
+                    "state" : doc.state
+                }
+            }
+        });
     }
 });
+
+
