@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Month Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .current-month-details {
+            padding: 20px;
+        }
+        .card-deck .card {
+            margin-bottom: 20px;
+        }
+        .financial-details, .non-financial-details {
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .nav_box {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="current-month-details">
+        <div class="nav_box">
+            <p>Month: {{ current_month }}</p>
+        </div>
+        
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Total Activities For Current Month">Total Activities</h5>
+                    <p class="card-text number">{{ activities_count }}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Financial Activities">Financial Activities</h5>
+                    <p class="card-text number">{{ financial_activities_count }}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Non-Financial Activities">Non-Financial Activities</h5>
+                    <p class="card-text number">{{ non_financial_activities_count }}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Total Number of Activities Overdue from the Last Month">Total Number of Activities Overdue from the Last Month</h5>
+                    <p class="card-text number">{{non_financial_activities_due_count + financial_activities_over_due_from_last_month}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="financial-details">Financial Activity Details</div>
+
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Budget Allocated for Financial Activities">Budget Allocated for Financial Activities</h5>
+                    <p class="card-text number">₹ {{ actual_budget_allocated_for_the_current_month }}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Budget Utilised for Financial Activities">Budget Utilised for Financial Activities</h5>
+                    <p class="card-text number">₹ {{ actual_budget_utilised_for_current_month }}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Financial Activities Completed">Financial Activities Completed</h5>
+                    <p class="card-text number">{{financial_activities_completed}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Percentage of Budget Utilised">Percentage of Budget Utilised</h5>
+                    <p class="card-text number">{{percentage_of_budget_utilised}}%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Percentage of Financial Activities Completed For Current Financial Year">Percentage of Financial Activities Completed For Current Financial Year</h5>
+                    <p class="card-text number">{{percentage_of_financial_activities_completed}}%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Percentage of Financial Activities Completed (Payment Processed) On Time In Current Month">Percentage of Financial Activities Completed (Payment Processed) On Time In Current Month</h5>
+                    <p class="card-text number">{{percentage_of_financial_activities_process_payment}}%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Number of Financial Activities Due (Payment Not Processed) For the Current Month">Number of Financial Activities Due (Payment Not Processed) For the Current Month</h5>
+                    <p class="card-text number">{{due_payment_financial_activities_count}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Number of Financial Activities Overdue from the Last Month (Incomplete Activities from Last Month)">Number of Financial Activities Overdue from the Last Month (Incomplete Activities from Last Month)</h5>
+                    <p class="card-text number">{{financial_activities_over_due_from_last_month}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="non-financial-details">Non-Financial Activity Details</div>
+
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Percentage of Non-Financial Activities Completed For Current Financial Year">Percentage of Non-Financial Activities Completed For Current Financial Year</h5>
+                    <p class="card-text number">{{non_financial_completion_percentage}}%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Number of Non-Financial Activities Overdue from the Last Month (Incomplete Activities from Last Month)">Number of Non-Financial Activities Overdue from the Last Month (Incomplete Activities from Last Month)</h5>
+                    <p class="card-text number">{{non_financial_activities_overdue_count}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" title="Percentage of Non-Financial Activities Completed in Current Month">Percentage of Non-Financial Activities Completed in Current Month</h5>
+                    <p class="card-text number">{{percentage_of_non_financial_activities_completed}}%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Number of Non-Financial Activities Due For The Current Month</div>
+                <div class="card-body">
+                    <h5 class="card-title" title="Number of Non-Financial Activities Due For The Current Month">Number of Non-Financial Activities Due For The Current Month</h5>
+                    <p class="card-text number">{{non_financial_activities_due_count}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+s

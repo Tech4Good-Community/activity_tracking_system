@@ -1,9 +1,8 @@
-# Copyright (c) 2024, Tech4Good Community and contributors
-# For license information, please see license.txt
 
 import frappe
 from frappe.model.document import Document
 from frappe import _
+import json, datetime
 
 class Activity(Document):
     def validate(self):
@@ -36,16 +35,39 @@ def create_activity_in_planning_sheet(doc_name):
         frappe.msgprint(f"Activity {doc_name} already exists in the planning sheet.")
 
 
+
 @frappe.whitelist()
-def get_all_activities():
-    activities = frappe.get_all("Activity", fields=["name","activity" ,"type_of_activity", "city", "state", "activity_to_be_completed_in_which_month"])
-    print(activities)
-    return activities
+def get_all_activities(filters=None):
+    try:
+        filters = json.loads(filters or '{}')
+        current_date = datetime.date.today()
+        start_of_month = current_date.replace(day=1)
+        end_of_month = current_date.replace(day=1, month=current_date.month % 12 + 1, year=current_date.year if current_date.month < 12 else current_date.year + 1) - datetime.timedelta(days=1)
 
 
+        activities = frappe.db.get_list('Activity',
+            fields=['name', 'activity', 'type_of_activity', 'city', 'assigned_to_which_department_for_support', 'activity_to_be_completed_in_which_month'],
+            filters={
+                'activity_to_be_completed_in_which_month': ['>=', start_of_month],
+                'activity_to_be_completed_in_which_month': ['<=', end_of_month],
+            })
 
+        notification_activities = frappe.db.get_list('Activity', fields=['activity', 'activity_completion_date'],filters={
+        'activity_completion_date': ['>=', current_date],
+        'activity_completion_date': ['<=', end_of_month]
+    })
 
-    #frappe.msgprint(_("Activity {0} created in Planning Sheet {1}").format(new_activity.activity, planning_sheet.name))
+        notification_activities = [activity for activity in notification_activities if activity.get('activity_completion_date') is not None]
+
+        for activity in activities:
+            activity['activity_to_be_completed_in_which_month'] = frappe.utils.formatdate(activity['activity_to_be_completed_in_which_month'], 'MMMM YYYY')
+        for activity in notification_activities:
+            activity['activity_completion_date'] = frappe.utils.formatdate(activity['activity_completion_date'], 'dd MMMM YYYY')
+        return activities, notification_activities
+    except Exception as e:
+        frappe.log_error(message=frappe.get_traceback(), title="Error in get_activities_for_current_month")
+        raise e
+
 
 
 

@@ -12,9 +12,9 @@
  "owner": "Administrator",
  "page_name": "activity-page",
  "roles": [],
- "script": null,
+ "script": "activity-page.html",
  "standard": "Yes",
- "style": null,
+ "style": "activity_tracking_system/public/CSS/custom.css",
  "system_page": 1,
  "title": "Activity"
 }

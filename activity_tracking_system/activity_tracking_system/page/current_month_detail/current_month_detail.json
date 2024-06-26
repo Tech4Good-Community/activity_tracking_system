@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2024-06-23 22:26:05.694365",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2024-06-23 22:26:50.986291",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "current-month-detail",
+ "owner": "Administrator",
+ "page_name": "current-month-detail",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Current Month Details"
+}
