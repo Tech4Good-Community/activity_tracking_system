@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-lg-8">
         <div class="table-responsive-xl">
+            <h3>Financial Activities</h3>
             <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
@@ -14,19 +15,52 @@
                 </thead>
                 <tbody>
                     {% for activity in activities %}
+                        {% if activity.type_of_activity == "Financial Activity" %}
+                        <tr>
+                            <td><a href="/app/activity/{{ activity.name }}"><b>{{ activity.activity }}</b></a></td>
+                            <td>{{ activity.name }}</td>
+                            <td>{{ activity.type_of_activity }}</td>
+                            <td>{{ activity.assigned_to_which_department_for_support }}</td>
+                            <td>{{ activity.city }}</td>
+                            <td>{{ activity.activity_to_be_completed_in_which_month }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive-xl">
+            <h3>Non-financial Activities</h3>
+            <table class="table table-hover">
+                <thead class="thead-dark">
                     <tr>
-                        <td><a href="/app/activity/{{ activity.name }}"><b>{{ activity.activity }}</b></a></td>
-                        <td>{{ activity.name }}</td>
-                        <td>{{ activity.type_of_activity }}</td>
-                        <td>{{ activity.assigned_to_which_department_for_support }}</td>
-                        <td>{{ activity.city }}</td>
-                        <td>{{ activity.activity_to_be_completed_in_which_month }}</td>
+                        <th>Activity Name</th>
+                        <th>Activity Code</th>
+                        <th>Type of Activity</th>
+                        <th>Supporting Department</th>
+                        <th>City</th>
+                        <th>Deadline Month</th>
                     </tr>
+                </thead>
+                <tbody>
+                    {% for activity in activities %}
+                        {% if activity.type_of_activity == "Non-financial Activity" %}
+                        <tr>
+                            <td><a href="/app/activity/{{ activity.name }}"><b>{{ activity.activity }}</b></a></td>
+                            <td>{{ activity.name }}</td>
+                            <td>{{ activity.type_of_activity }}</td>
+                            <td>{{ activity.assigned_to_which_department_for_support }}</td>
+                            <td>{{ activity.city }}</td>
+                            <td>{{ activity.activity_to_be_completed_in_which_month }}</td>
+                        </tr>
+                        {% endif %}
                     {% endfor %}
                 </tbody>
             </table>
         </div>
     </div>
+
     <div class="col-md-4">
         <div class="card">
             <div class="card-header bg-primary text-white">
