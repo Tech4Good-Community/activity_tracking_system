@@ -6,6 +6,10 @@ import json, datetime
 
 class Activity(Document):
     def validate(self):
+ # Check if all date fields are filled
+        if not self.activity_completion_date or not self.activity_process_initiating_date or not self.activity_to_be_completed_in_which_month:
+            frappe.throw(_("Please fill all date fields: Activity Completion Date, Activity Process Initiating Date, and Activity To Be Completed In Which Month."), title=_("Missing Date Fields"))
+       #Was showing unknown error if condition occured.
         if self.activity_completion_date:
             if self.activity_completion_date < self.activity_process_initiating_date:
                 frappe.throw(title='Error', msg='Initiation date cannot be greater than completion date')

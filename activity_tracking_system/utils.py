@@ -109,7 +109,7 @@ def get_financial_activities_completion_percentage():
 
     completed_financial_activities = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": ["between", [start_date, end_date]],
                                                                            "type_of_activity": "Financial Activity",
-                                                                           "status_of_the_activity": "Payment Processed"})
+                                                                           "status_of_the_activity": "Activity Completed and Payment Processed"})
 
     if total_financial_activities > 0:
         completion_percentage = round(((completed_financial_activities / total_financial_activities) * 100),2)
@@ -185,8 +185,7 @@ def get_num_of_non_financial_activities_due():
     total_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Non-financial Activity",
                                                                   "activity_to_be_completed_in_which_month": ["between", [first_day_of_month, last_day_of_month]]})
 
-    due_activities_count = total_activities_count - completed_activities_count
-    
+    due_activities_count = abs(total_activities_count - completed_activities_count)   
     return due_activities_count
 
 @frappe.whitelist()
@@ -196,7 +195,7 @@ def get_num_of_financial_activities_payment_processed():
     completed_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
                                                                        "activity_completion_date":["between", [first_day_of_month, last_day_of_month]],
                                                                        "activity_to_be_completed_in_which_month": ["between", [first_day_of_month, last_day_of_month]],
-                                                                    "status_of_the_activity":"Payment Processed"
+                                                                    "status_of_the_activity":"Activity Completed and Payment Processed"
                                                                     
                                                                       })
     return completed_activities_count
@@ -212,7 +211,7 @@ def get_percentage_of_financial_activities_payment_processed():
     payment_processed_activities = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
                                                                        "activity_completion_date": ["between", [first_day_of_month, last_day_of_month]],
                                                                        "activity_to_be_completed_in_which_month":["between", [first_day_of_month, last_day_of_month]],
-                                                                       "status_of_the_activity":"Payment Processed"
+                                                                       "status_of_the_activity":"Activity Completed and Payment Processed"
                                                                       })
     if completed_activities_count > 0:
         percentage_of_financial_activities_processed_payment = round(((payment_processed_activities / completed_activities_count) * 100), 2)
@@ -306,13 +305,16 @@ def get_activity_details():
     financial_completed_activities_count = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
                                                                        "activity_completion_date":["between", [first_day_of_month, last_day_of_month]],
                                                                        "activity_to_be_completed_in_which_month": ["between", [first_day_of_month, last_day_of_month]],
-                                                                    "status_of_the_activity":"Payment Processed"
+                                                                    "status_of_the_activity":"Activity Completed and Payment Processed"
                                                                     
                                                                       })
     
     total_utilized_sum = get_budget_utilized_sum()
     total_allocated_sum = get_budget_allocated_sum()
     
+    # Ensure total_allocated_sum and total_utilized_sum are not None
+    total_allocated_sum = total_allocated_sum or 0
+    total_utilized_sum = total_utilized_sum or 0
     if total_allocated_sum != 0:  # Avoid division by zero
         percentage_of_budget_utilised = round(((total_utilized_sum / total_allocated_sum) * 100), 2)
     else:
@@ -328,7 +330,7 @@ def get_activity_details():
 
     completed_financial_activities_for_financial_year = frappe.db.count("Activity", filters={"activity_to_be_completed_in_which_month": ["between", [start_date, end_date]],
                                                                            "type_of_activity": "Financial Activity",
-                                                                           "status_of_the_activity": "Payment Processed"})
+                                                                           "status_of_the_activity": "Activity Completed and Payment Processed"})
 
     if total_financial_activities_for_financial_year > 0:
         completion_percentage = round(((completed_financial_activities_for_financial_year / total_financial_activities_for_financial_year) * 100),2)
@@ -349,7 +351,7 @@ def get_activity_details():
     payment_processed_activities = frappe.db.count("Activity", filters={"type_of_activity": "Financial Activity",
                                                                        "activity_completion_date": ["between", [first_day_of_month, last_day_of_month]],
                                                                        "activity_to_be_completed_in_which_month":["between", [first_day_of_month, last_day_of_month]],
-                                                                       "status_of_the_activity":"Payment Processed"
+                                                                       "status_of_the_activity":"Activity Completed and Payment Processed"
                                                                       })
     if completed_activities_count > 0:
         percentage_of_financial_activities_processed_payment = round(((payment_processed_activities / completed_activities_count) * 100), 2)
@@ -398,7 +400,7 @@ def get_activity_details():
         "non_financial_activities_count": non_financial_activities_count,
         "payment_processed_actitivies_count":payment_processed_activities,
         "financial_activities_count": financial_activities_count,
-        "actual_budget_allocated_for_the_current_month": actual_budget_allocated_for_the_current_month,
+        "actual_budget_allocated_for_the_current_month": total_allocated_sum,
         "financial_activities_completed": financial_completed_activities_count,
         "percentage_of_budget_utilised":percentage_of_budget_utilised,
         "percentage_of_financial_activities_completed":completion_percentage,

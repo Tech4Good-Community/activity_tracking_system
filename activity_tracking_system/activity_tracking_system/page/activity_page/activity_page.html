@@ -1,51 +1,59 @@
-<div class="main-container">
-    <div class="content-container">
-        <div class="table-container">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Activity Code</th>
-                        <th>Activity Name</th>
-                        <th>Type of Activity</th>
-                        <th>Supporting Department</th>
-                        <th>City</th>
-                        <th>Deadline Month</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for activity in activities %}
-                    <tr>
-                        <td>{{ activity.name }}</td>
-                        <td>{{ activity.activity }}</td>
-                        <td>{{ activity.type_of_activity }}</td>
-                        <td>{{ activity.assigned_to_which_department_for_support }}</td>
-                        <td>{{ activity.city }}</td>
-                        <td>{{ activity.activity_to_be_completed_in_which_month }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        <div class="sidebar">
-            <div class="notification-container">
-                <p>Notifications</p>
-                <table class="table table-bordered">
-                    <thead>
+
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="table-responsive-xl">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
                         <tr>
-                            <th>Activity</th>
-                            <th>Date of Completion</th>
+                            <th>Activity Code</th>
+                            <th>Activity Name</th>
+                            <th>Type of Activity</th>
+                            <th>Supporting Department</th>
+                            <th>City</th>
+                            <th>Deadline Month</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for activity in notification_activities %}
+                        {% for activity in activities %}
                         <tr>
+                            <td>{{ activity.name }}</td>
                             <td>{{ activity.activity }}</td>
-                            <td>{{ activity.activity_completion_date }}</td>
+                            <td>{{ activity.type_of_activity }}</td>
+                            <td>{{ activity.assigned_to_which_department_for_support }}</td>
+                            <td>{{ activity.city }}</td>
+                            <td>{{ activity.activity_to_be_completed_in_which_month }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <p class="mb-0">Notifications</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Date of Completion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for activity in notification_activities %}
+                                <tr>
+                                    <td>{{ activity.activity }}</td>
+                                    <td>{{ activity.activity_completion_date }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>

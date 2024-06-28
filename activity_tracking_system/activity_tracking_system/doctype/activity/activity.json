@@ -149,7 +149,7 @@
    "fieldname": "status_of_the_activity",
    "fieldtype": "Select",
    "label": "Status Of The Activity",
-   "options": "\nNot Initiated\nUnder Process\nActivity Completed But Payment Not Required\nActivity Completed But Payment Not Processed\nPayment Processed\nOver Due\nNot Applicable"
+   "options": "\nNot Initiated\nUnder Process\nActivity Completed But Payment Not Required\nActivity Completed But Payment Not Processed\nActivity Completed and Payment Processed\nOver Due\nNot Applicable"
   },
   {
    "fieldname": "comments",
@@ -187,7 +187,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 12:07:46.737851",
+ "modified": "2024-06-28 13:10:41.441468",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",

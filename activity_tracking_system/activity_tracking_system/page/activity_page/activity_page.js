@@ -86,7 +86,7 @@ projectButton.on('click', function() {
 var funderDetailButtonContainer = $('<div class="custom-button"></div>').appendTo(customButtonContainer);
 var funderDetailButton = $('<button>Funder Detail</button>').appendTo(funderDetailButtonContainer);
 funderDetailButton.on('click', function() {
-    window.location.href = "/app/funder-detail";
+    window.location.href = "/app/funder-details";
 });
 
 // Create Planning Sheet button
