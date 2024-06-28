@@ -65,27 +65,32 @@
         <div class="card">
             <div class="card-header bg-primary text-white">
                 <p class="mb-0">Notifications</p>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>Activity</th>
-                                <th>Date of Completion</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for activity in notification_activities %}
-                            <tr>
-                                <td><a href="/app/activity/{{ activity.name }}"><b>{{ activity.activity }}</b></a></td>
-                                <td>{{ activity.activity_completion_date }}</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Activity</th>
+                            <th>Date of Completion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for activity in notification_activities %}
+                        <tr>
+                            <td><a href="/app/activity/{{ activity.name }}"><b>{{ activity.activity }}</b></a></td>
+                            <td>{{ activity.activity_completion_date }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
+    </div>
+    <div class="mt-3">
+        <a href="/app/activity" class="btn btn-success btn-block">Activity</a>
+        <a href="/app/project" class="btn btn-info btn-block">Project</a>
+        <a href="/app/funder-details" class="btn btn-success btn-block">Funder Details</a>
+        <a href="/app/planning-sheet" class="btn btn-info btn-block">Planning Sheet</a>
     </div>
 </div>
