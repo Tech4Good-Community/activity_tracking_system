@@ -59,6 +59,7 @@
    "fieldname": "city",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "City",
    "options": "City"
   },
@@ -76,6 +77,7 @@
    "fieldname": "type_of_activity",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type of Activity",
    "options": "Financial Activity\nNon-financial Activity"
   },
@@ -84,6 +86,7 @@
    "fieldname": "project_code",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Project Code",
    "options": "Project"
   },
@@ -116,6 +119,7 @@
   {
    "fieldname": "assigned_to_which_department_for_support",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Assigned To Which Department For Support",
    "options": "Department"
   },
@@ -148,6 +152,7 @@
   {
    "fieldname": "status_of_the_activity",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Status Of The Activity",
    "options": "\nNot Initiated\nUnder Process\nActivity Completed But Payment Not Required\nActivity Completed But Payment Not Processed\nActivity Completed and Payment Processed\nOver Due\nNot Applicable"
   },
@@ -187,7 +192,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-28 13:10:41.441468",
+ "modified": "2024-06-28 15:48:06.714940",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
