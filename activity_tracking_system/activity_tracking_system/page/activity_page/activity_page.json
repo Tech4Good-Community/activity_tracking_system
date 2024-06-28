@@ -5,16 +5,16 @@
  "doctype": "Page",
  "icon": "fa fa-star",
  "idx": 0,
- "modified": "2024-06-19 15:37:59.493770",
+ "modified": "2024-06-28 15:04:34.902067",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "activity-page",
  "owner": "Administrator",
  "page_name": "activity-page",
  "roles": [],
- "script": "activity-page.html",
+ "script": null,
  "standard": "Yes",
- "style": "activity_tracking_system/public/CSS/custom.css",
+ "style": null,
  "system_page": 1,
- "title": "Activity"
+ "title": "Activity Homepage"
 }
