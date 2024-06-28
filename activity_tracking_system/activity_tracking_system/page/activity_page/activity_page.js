@@ -69,35 +69,8 @@ frappe.pages['activity-page'].on_page_load = function(wrapper) {
 
     var customButtonContainer = $('<div class="custom-button-container"></div>').appendTo(page.body);
 
-    // Create Activity button
-    var activityButtonContainer = $('<div class="custom-button"></div>').appendTo(customButtonContainer);
-    var activityButton = $('<button>Activity</button>').appendTo(activityButtonContainer);
-    activityButton.on('click', function() {
-        window.location.href = "/app/activity";
-    });
 
-    // Create Project button
-    var projectButtonContainer = $('<div class="custom-button"></div>').appendTo(customButtonContainer);
-    var projectButton = $('<button>Project</button>').appendTo(projectButtonContainer);
-    projectButton.on('click', function() {
-        window.location.href = "/app/project";
-    });
+    // Initial page load
 
-    // Create Funder Detail button
-    var funderDetailButtonContainer = $('<div class="custom-button"></div>').appendTo(customButtonContainer);
-    var funderDetailButton = $('<button>Funder Detail</button>').appendTo(funderDetailButtonContainer);
-    funderDetailButton.on('click', function() {
-        window.location.href = "/app/funder-details";
-    });
-
-    // Create Planning Sheet button
-    var planningSheetButtonContainer = $('<div class="custom-button"></div>').appendTo(customButtonContainer);
-    var planningSheetButton = $('<button>Planning Sheet</button>').appendTo(planningSheetButtonContainer);
-    planningSheetButton.on('click', function() {
-        window.location.href = "/app/planning-sheet";
-    });
-
-    // Load department options and refresh the page initially
-    loadDepartmentOptions();
     page.refresh();
 };
