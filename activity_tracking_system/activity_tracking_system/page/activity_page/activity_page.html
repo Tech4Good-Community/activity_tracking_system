@@ -44,7 +44,7 @@
                         <tbody>
                             {% for activity in notification_activities %}
                             <tr>
-                                <td>{{ activity.activity }}</td>
+                                <td><a href="/app/activity/{{ activity.name }}"><b>{{ activity.activity }}</b></a></td>
                                 <td>{{ activity.activity_completion_date }}</td>
                             </tr>
                             {% endfor %}
