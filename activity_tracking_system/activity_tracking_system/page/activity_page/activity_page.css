@@ -1,34 +1,60 @@
+/* General body styles */
 body {
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
 
-.main-container {
+/* Custom button container styles */
+.custom-button-container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px 25px 25px 25px;
+    gap: 15px; /* Spacing between buttons */
 }
 
-.content-container {
-    display: flex;
-    flex: 1;
-    gap: 20px;
+/* Individual button container styles */
+.custom-button {
+    margin-right: 10px;
 }
 
-.table-container {
-    flex: 2;
+/* Button styles */
+.custom-button button {
+    padding: 15px 25px; /* Adjust padding for a better look */
+    background-color: #488A99; /* Primary color */
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.sidebar {
-    flex: 1;
+/* Hover effect */
+.custom-button button:hover {
+    background-color: #1F3F49; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
+/* Focus effect */
+.custom-button button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(72, 138, 153, 0.5); /* Custom focus outline */
+}
+
+/* Active effect */
+.custom-button button:active {
+    transform: translateY(1px); /* Button press effect */
+}
+
+/* Table styles */
+.table-responsive-xl {
+    margin-top: 20px;
 }
 
 .table th, .table td {
@@ -42,78 +68,31 @@ body {
     color: white;
 }
 
-.notification-container p {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
 }
 
-.sidebar {
-    width: calc(100% / 5); /* Sidebar takes 1/3 of the width */
-    float: right; /* Float the sidebar to the right */
-    padding: 20px;
-    box-sizing: border-box;
+/* Card styles */
+.card-header {
+    background-color: #4a90e2; /* Bootstrap primary color */
+    color: white;
 }
 
-.notification-container {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.card-body {
     padding: 20px;
 }
 
-.notification-container p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.card-body .table {
+    margin: 0;
 }
 
-.notification-container table {
-    width: 100%;
-}
-
-.notification-container th, .notification-container td {
+.card-body .table th, .card-body .table td {
+    border: 1px solid #e0e0e0;
     padding: 10px;
     text-align: left;
-    
 }
 
-.notification-container th {
-    font-weight: bold;
-    background-color: #ff6c11;
+.card-body .table th {
+    background-color: #ff6c11; /* Notification header color */
+    color: white;
 }
-
-/* Style for custom button container */
-.custom-button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 10px;
-    padding: 15px 25px 25px 25px; /* Adjust padding as needed */
-}
-
-/* Style for individual custom button */
-.custom-button {
-    margin-right: 10px; /* Adjust margin between buttons */
-    padding: 25px; /* Adjust padding for button container */
-}
-
-/* Style for the button itself */
-.custom-button button {
-    padding: 15px; /* Adjust padding for button */
-    background-color: #488A99; /* Bootstrap primary color */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-/* Hover effect */
-.custom-button button:hover {
-    background-color: #1F3F49; /* Darker shade of primary color on hover */
-}
-
-
