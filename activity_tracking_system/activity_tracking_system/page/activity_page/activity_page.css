@@ -72,6 +72,16 @@ body {
     background-color: #f1f1f1;
 }
 
+.card{
+    margin-top: 60px;
+
+}
+
+.card .p{
+    font-size: 24px;
+    font-style: bold;
+}
+
 /* Card styles */
 .card-header {
     background-color: #4a90e2; /* Bootstrap primary color */
@@ -93,6 +103,6 @@ body {
 }
 
 .card-body .table th {
-    background-color: #ff6c11; /* Notification header color */
+    background-color: #808080; /* Notification header color */
     color: white;
 }

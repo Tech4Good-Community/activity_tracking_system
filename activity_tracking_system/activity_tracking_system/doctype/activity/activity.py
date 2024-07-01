@@ -55,19 +55,20 @@ def get_all_activities(filters=None):
         if 'supporting_department' in filters and filters['supporting_department']:
             activity_filters['assigned_to_which_department_for_support'] = filters['supporting_department']
 
-        print(activity_filters)
         activities = frappe.db.get_list('Activity',
             fields=['name', 'activity', 'type_of_activity', 'city', 'assigned_to_which_department_for_support', 'activity_to_be_completed_in_which_month'],
             filters=activity_filters
         )
 
         notification_activities = frappe.db.get_list('Activity',
-            fields=['activity', 'activity_completion_date'],
-            filters={
-                'activity_completion_date': ['>=', current_date],
-                'activity_completion_date': ['<=', end_of_month]
-            }
-        )
+    fields=['activity', 'activity_completion_date'],
+    filters={
+        'activity_completion_date': ['between', [current_date, end_of_month]]
+    }
+)
+
+        print(current_date)
+        print(notification_activities)
 
         # Filter out activities without a completion date
         notification_activities = [activity for activity in notification_activities if activity.get('activity_completion_date') is not None]

@@ -71,6 +71,6 @@ frappe.pages['activity-page'].on_page_load = function(wrapper) {
 
 
     // Initial page load
-
+    loadDepartmentOptions();
     page.refresh();
 };
