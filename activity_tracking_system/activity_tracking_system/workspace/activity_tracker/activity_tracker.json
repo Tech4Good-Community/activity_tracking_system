@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"HSMVF0Lq7Q\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Activity Tracker</span>\",\"col\":12}},{\"id\":\"eSk7wOVfMq\",\"type\":\"card\",\"data\":{\"card_name\":\"Funder and Project Details\",\"col\":4}},{\"id\":\"UhoyUtJ0jW\",\"type\":\"card\",\"data\":{\"card_name\":\"Planning and Activity Details\",\"col\":4}},{\"id\":\"LULdYYsknn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Insights</b></span>\",\"col\":12}},{\"id\":\"JJSigtKt4S\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity Tracker Dashboard\",\"col\":5}},{\"id\":\"KZtaq6UjFg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity view\",\"col\":3}},{\"id\":\"ZvPXTCRZF7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current month details\",\"col\":3}}]",
+ "content": "[{\"id\":\"HSMVF0Lq7Q\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Activity Tracker</span>\",\"col\":12}},{\"id\":\"eSk7wOVfMq\",\"type\":\"card\",\"data\":{\"card_name\":\"Funder and Project Details\",\"col\":4}},{\"id\":\"UhoyUtJ0jW\",\"type\":\"card\",\"data\":{\"card_name\":\"Planning and Activity Details\",\"col\":4}},{\"id\":\"LULdYYsknn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Insights</b></span>\",\"col\":12}},{\"id\":\"JJSigtKt4S\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity Tracker Dashboard\",\"col\":5}},{\"id\":\"KZtaq6UjFg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Activity view\",\"col\":3}},{\"id\":\"ZvPXTCRZF7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Current month details\",\"col\":3}},{\"id\":\"6Luqu0AgKt\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0nAe1ePpjc\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
  "creation": "2024-02-13 11:17:08.917065",
  "custom_blocks": [],
  "docstatus": 0,
@@ -111,9 +111,78 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "City Manager Report",
+   "link_count": 0,
+   "link_to": "City Manager Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Director Program Report",
+   "link_count": 0,
+   "link_to": "Director Program Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Finance Department Report",
+   "link_count": 0,
+   "link_to": "Finance Department Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "HR and Admin Department Report",
+   "link_count": 0,
+   "link_to": "HR and Admin Department Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procurement Department Report",
+   "link_count": 0,
+   "link_to": "Procurement Department Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "State Manager Report",
+   "link_count": 0,
+   "link_to": "State Manager Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-06-28 10:13:19.438470",
+ "modified": "2024-07-02 10:56:50.192964",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity Tracker",
