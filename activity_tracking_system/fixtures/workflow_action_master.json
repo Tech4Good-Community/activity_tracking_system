@@ -19,5 +19,61 @@
   "modified": "2024-06-21 16:49:18.973026",
   "name": "Submit to Department Head",
   "workflow_action_name": "Submit to Department Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 12:52:38.384157",
+  "name": "Lock the Funds Sheet",
+  "workflow_action_name": "Lock the Funds Sheet"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 12:53:18.539572",
+  "name": "Finalise the Funds",
+  "workflow_action_name": "Finalise the Funds"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 12:53:56.326873",
+  "name": "Request For Edit Access",
+  "workflow_action_name": "Request For Edit Access"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 12:55:36.386533",
+  "name": "Submit the Edit",
+  "workflow_action_name": "Submit the Edit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 12:56:29.974119",
+  "name": "Submit Unchanged Document",
+  "workflow_action_name": "Submit Unchanged Document"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 13:03:23.388777",
+  "name": "Submit to Deputy Director",
+  "workflow_action_name": "Submit to Deputy Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 13:09:09.890371",
+  "name": "Send to Department Head",
+  "workflow_action_name": "Send to Department Head"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-03 13:11:12.623394",
+  "name": "Approve the Planning Sheet",
+  "workflow_action_name": "Approve the Planning Sheet"
  }
 ]

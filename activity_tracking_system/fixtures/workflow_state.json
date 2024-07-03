@@ -34,5 +34,95 @@
   "name": "Activity Approved",
   "style": "Success",
   "workflow_state_name": "Activity Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 12:47:47.318066",
+  "name": "Funds Under Review",
+  "style": "Warning",
+  "workflow_state_name": "Funds Under Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 12:48:48.521482",
+  "name": "Requesting Access For Edit",
+  "style": "Info",
+  "workflow_state_name": "Requesting Access For Edit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 12:49:14.806872",
+  "name": "Edit Permitted",
+  "style": "Info",
+  "workflow_state_name": "Edit Permitted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 12:49:54.173181",
+  "name": "Edit Denied",
+  "style": "Danger",
+  "workflow_state_name": "Edit Denied"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 12:50:15.654135",
+  "name": "Edit Submitted",
+  "style": "Primary",
+  "workflow_state_name": "Edit Submitted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 12:50:41.706033",
+  "name": "No Edits Done",
+  "style": "Inverse",
+  "workflow_state_name": "No Edits Done"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 12:51:02.424055",
+  "name": "Funds Finalised",
+  "style": "Success",
+  "workflow_state_name": "Funds Finalised"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 13:00:40.729082",
+  "name": "Review by State Manager",
+  "style": "Info",
+  "workflow_state_name": "Review by State Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 13:01:19.942320",
+  "name": "Approval From Deputy Director",
+  "style": "",
+  "workflow_state_name": "Approval From Deputy Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-03 13:10:05.162172",
+  "name": "Planning Sheet Finalised",
+  "style": "Success",
+  "workflow_state_name": "Planning Sheet Finalised"
  }
 ]
