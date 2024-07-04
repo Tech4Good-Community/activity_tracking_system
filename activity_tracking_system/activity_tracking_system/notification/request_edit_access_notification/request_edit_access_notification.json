@@ -13,14 +13,14 @@
  "is_standard": 1,
  "message": "<p> Requesting Access for Edit </p>",
  "message_type": "HTML",
- "modified": "2024-07-02 11:30:25.766215",
+ "modified": "2024-07-04 12:18:45.892628",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Request Edit Access Notification",
  "owner": "Administrator",
  "recipients": [
   {
-   "condition": "doc.workflow_status == 'Request Access to Edit'",
+   "condition": "doc.workflow_state == 'Request Access to Edit'",
    "receiver_by_role": "Executive Director"
   }
  ],
