@@ -1,0 +1,22 @@
+<html>
+<body>
+  <h1>Planning Sheet Notification</h1>
+  <p>Hello,</p>
+  <p>Please review and approve the planning sheet with the following details:</p>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Project Code</th>
+      <th>Due Date</th>
+      <th>Link</th>
+    </tr>
+    <tr>
+      <td>{{ doc.name }}</td>
+      <td>{{ doc.project_code }}</td>
+      <td>{{ frappe.utils.formatdate(frappe.utils.add_days(frappe.utils.nowdate(), 7)) }}</td>
+      <td><a href="{{ frappe.utils.get_url() }}/app/planning-sheet/{{ doc.name }}">View Document</a></td>
+    </tr>
+  </table>
+  <p>Regards,<br>Team</p>
+</body>
+</html>

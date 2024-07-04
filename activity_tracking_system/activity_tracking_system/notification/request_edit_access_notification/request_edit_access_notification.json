@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2024-07-02 11:05:05.388577",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Funds Allocation",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p> Requesting Access for Edit </p>",
+ "message_type": "HTML",
+ "modified": "2024-07-02 11:30:25.766215",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Request Edit Access Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "doc.workflow_status == 'Request Access to Edit'",
+   "receiver_by_role": "Executive Director"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Requesting Edit Access for {{doc.name}}"
+}
