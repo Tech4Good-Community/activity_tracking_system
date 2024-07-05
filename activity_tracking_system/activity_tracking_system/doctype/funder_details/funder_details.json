@@ -125,7 +125,7 @@
    "link_fieldname": "funder"
   }
  ],
- "modified": "2024-06-19 11:21:06.055564",
+ "modified": "2024-07-05 11:14:40.793441",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Funder Details",
@@ -153,6 +153,42 @@
    "export": 1,
    "read": 1,
    "role": "State Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Executive Director",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Deputy Director",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Department Head",
+   "share": 1,
+   "write": 1
   }
  ],
  "show_title_field_in_link": 1,
