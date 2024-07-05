@@ -67,9 +67,6 @@ def get_all_activities(filters=None):
     }
 )
 
-        print(current_date)
-        print(notification_activities)
-
         # Filter out activities without a completion date
         notification_activities = [activity for activity in notification_activities if activity.get('activity_completion_date') is not None]
 

@@ -355,7 +355,6 @@ def get_activity_details():
                                                                       })
     if completed_activities_count > 0:
         percentage_of_financial_activities_processed_payment = round(((payment_processed_activities / completed_activities_count) * 100), 2)
-        print(percentage_of_financial_activities_processed_payment)
     else:
         percentage_of_financial_activities_processed_payment = 0
 
