@@ -5,13 +5,23 @@
  "doctype": "Page",
  "icon": "fa fa-star",
  "idx": 0,
- "modified": "2024-06-28 15:04:34.902067",
+ "modified": "2024-07-05 10:55:15.249711",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "activity-page",
  "owner": "Administrator",
  "page_name": "activity-page",
- "roles": [],
+ "roles": [
+  {
+   "role": "Executive Director"
+  },
+  {
+   "role": "Deputy Director"
+  },
+  {
+   "role": "Department Head"
+  }
+ ],
  "script": null,
  "standard": "Yes",
  "style": null,

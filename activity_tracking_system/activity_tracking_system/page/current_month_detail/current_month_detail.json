@@ -4,13 +4,23 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2024-06-23 22:26:50.986291",
+ "modified": "2024-07-05 10:55:38.432090",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "current-month-detail",
  "owner": "Administrator",
  "page_name": "current-month-detail",
- "roles": [],
+ "roles": [
+  {
+   "role": "Executive Director"
+  },
+  {
+   "role": "Deputy Director"
+  },
+  {
+   "role": "Department Head"
+  }
+ ],
  "script": null,
  "standard": "Yes",
  "style": null,

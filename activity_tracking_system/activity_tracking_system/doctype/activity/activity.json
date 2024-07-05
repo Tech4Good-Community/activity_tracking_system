@@ -192,7 +192,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-28 14:59:40.629692",
+ "modified": "2024-07-05 10:53:55.293858",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Activity",
@@ -252,6 +252,45 @@
   {
    "read": 1,
    "role": "City Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Deputy Director",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Executive Director",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Department Head",
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
  "show_title_field_in_link": 1,
