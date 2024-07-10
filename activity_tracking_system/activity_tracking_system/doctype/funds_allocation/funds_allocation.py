@@ -41,8 +41,11 @@ def calculate_direct_cost(doc, salary_funds, travel_funds, equipment_funds, rese
         equipment_percentage = 0
         research_percentage = 0
 
-        self.excess_fund = self.grand_total - self.funds_for_the_project
-
+      # Calculate excess_fund
+        if self.grand_total < self.funds_for_the_project:
+            self.excess_fund = 0
+        else:
+            self.excess_fund = self.grand_total - self.funds_for_the_project
     
     data = {
         "salary_percentage" : salary_percentage,
