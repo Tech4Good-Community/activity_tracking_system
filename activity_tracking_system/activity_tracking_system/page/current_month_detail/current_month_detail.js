@@ -6,6 +6,15 @@ frappe.pages['current-month-detail'].on_page_load = function(wrapper) {
     });
 
 
+     // Add buttons to navigate to Activity and Home pages
+     page.set_primary_action('Go to Activity Page', function() {
+        frappe.set_route('activity-page');
+    });
+
+    page.set_secondary_action('Go to Home', function() {
+        frappe.set_route('app');
+    });
+
     // Fetch the activity details from the server
     frappe.call({
         method: 'activity_tracking_system.utils.get_activity_details', // Update with the correct path
