@@ -1,5 +1,3 @@
-//Requesting to calculate percentages of Direct cost and indirect cost.
-
 frappe.ui.form.on('Funds Allocation', {
     after_save: function(frm) {
         frappe.call({
@@ -24,20 +22,13 @@ frappe.ui.form.on('Funds Allocation', {
                     frappe.model.set_value(frm.doctype, frm.docname, 'equipment_percentage_of_allocation',r.message["equipment_percentage"]);
                     frappe.model.set_value(frm.doctype, frm.docname, 'research_percentage_of_allocation', r.message["research_percentage"]);
                     frappe.model.set_value(frm.doctype, frm.docname, 'indirect_percentage_of_allocation', r.message["indirect_cost_percentage"]);
-                    frappe.model.set_value(frm.doctype, frm.docname, 'grand_total', r.message["grand_total"])
+                    frappe.model.set_value(frm.doctype, frm.docname, 'grand_total', r.message["grand_total"]);
 
-                    doc.save()
+                    frappe.model.set_value(frm.doctype, frm.docname, 'excess_fund', r.message["grand_total"] - frm.doc.funds_for_the_project);
+
+                    frm.save();
                 }
             }
-        })
-
-
-
-
-
-
+        });
     }
-    
 });
-
-
