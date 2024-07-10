@@ -61,7 +61,7 @@ def get_all_activities(filters=None):
         )
 
         notification_activities = frappe.db.get_list('Activity',
-    fields=['activity', 'activity_completion_date'],
+    fields=['name','activity', 'activity_completion_date'],
     filters={
         'activity_completion_date': ['between', [current_date, end_of_month]]
     }
