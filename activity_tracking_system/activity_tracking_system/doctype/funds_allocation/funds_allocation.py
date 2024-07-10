@@ -6,7 +6,6 @@ class FundsAllocation(Document):
         if self.funds_for_the_project == 0:
             frappe.throw(title='Error', msg='Please fill funds for the project field')
         
-        self.excess_fund = self.grand_total - self.funds_for_the_project
 
 @frappe.whitelist()
 def calculate_direct_cost(doc, salary_funds, travel_funds, equipment_funds, research_funds, activity_funds, consultant_funds, indirect_cost):
@@ -41,6 +40,9 @@ def calculate_direct_cost(doc, salary_funds, travel_funds, equipment_funds, rese
         consultant_percentage = 0
         equipment_percentage = 0
         research_percentage = 0
+
+        self.excess_fund = self.grand_total - self.funds_for_the_project
+
     
     data = {
         "salary_percentage" : salary_percentage,
