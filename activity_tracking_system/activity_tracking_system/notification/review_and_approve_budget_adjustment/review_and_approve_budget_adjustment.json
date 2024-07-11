@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2024-07-11 12:31:08.145319",
+ "date_changed": "creation",
+ "days_in_advance": 7,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Funds Allocation",
+ "enabled": 1,
+ "event": "Days After",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hi,\n\nThis is a reminder to review and approve the budget adjustment for the activity \"{{ doc.name }}\". The request was submitted 7 days ago.\n\nThank you",
+ "message_type": "HTML",
+ "modified": "2024-07-11 12:32:00.815607",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Review and Approve Budget Adjustment",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "doc.workflow_state = 'Funds Under Review'",
+   "receiver_by_role": "Finance Department"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Reminder: Review and Approve Budget Adjustment"
+}

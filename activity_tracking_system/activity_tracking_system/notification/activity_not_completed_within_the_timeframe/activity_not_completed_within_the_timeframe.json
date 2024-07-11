@@ -1,0 +1,34 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-07-11 12:00:42.418102",
+ "date_changed": "activity_completion_date",
+ "days_in_advance": 2,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Activity",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hi {{ doc.owner }},\n\nThe milestone \"{{ doc.name }}\" is at risk of not meeting its deadline. The planned completion date is {{ doc.activity_completion_date }}.\n\nPlease take necessary actions to ensure timely completion.",
+ "message_type": "HTML",
+ "modified": "2024-07-11 12:06:36.893156",
+ "modified_by": "Administrator",
+ "module": "Activity Tracking System",
+ "name": "Activity not completed within the timeframe",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "doc.workflow_state != 'Activity Approved'",
+   "receiver_by_role": "State Manager"
+  },
+  {
+   "condition": "doc.workflow_state != 'Activity Approved'",
+   "receiver_by_role": "City Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Milestone At Risk: {{ doc.name}}"
+}

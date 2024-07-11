@@ -12,7 +12,7 @@
  "is_standard": 1,
  "message": "<html>\n<body>\n  <h1>Planning Sheet Notification</h1>\n  <p>Hello,</p>\n  <p>Please review and approve the planning sheet with the following details:</p>\n  <table border=\"1\">\n    <tr>\n      <th>Name</th>\n      <th>Project Code</th>\n      <th>Due Date</th>\n      <th>Link</th>\n    </tr>\n    <tr>\n      <td>{{ doc.name }}</td>\n      <td>{{ doc.project_code }}</td>\n      <td>{{ frappe.utils.formatdate(frappe.utils.add_days(frappe.utils.nowdate(), 7)) }}</td>\n      <td><a href=\"{{ frappe.utils.get_url() }}/app/planning-sheet/{{ doc.name }}\">View Document</a></td>\n    </tr>\n  </table>\n  <p>Regards,<br>Team</p>\n</body>\n</html>\n",
  "message_type": "HTML",
- "modified": "2024-07-04 12:51:00.329700",
+ "modified": "2024-07-11 11:27:34.179339",
  "modified_by": "Administrator",
  "module": "Activity Tracking System",
  "name": "Planning Sheet Notifications",
@@ -27,7 +27,7 @@
    "receiver_by_role": "City Manager"
   }
  ],
- "send_system_notification": 0,
+ "send_system_notification": 1,
  "send_to_all_assignees": 0,
  "sender": "",
  "sender_email": "",
