@@ -30,4 +30,4 @@ Each module or functionality is explained in a separate Markdown file:
 - Use `system-admin.md` for backend management and troubleshooting
 
 ---
-For questions, contact the PSI IT Support Team or your assigned Data Manager.
+
